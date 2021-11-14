@@ -41,6 +41,11 @@
     place-items: center;
 }
 
+#screen p {
+    color: white;
+    text-align: center;
+}
+
 #screen_white {
     width: 320px;
     height: 320px;
@@ -52,6 +57,10 @@
 
 #screen_white p {
     text-align: center;
+}
+
+#x404 {
+    font-size: 4em;
 }
 
 #keyboard {
