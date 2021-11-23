@@ -14,16 +14,13 @@
     </head>
     <body class="container-lg">
         <header></header>
-        <main class="row">
-            <!-- ========== LEFT MARGIN ========== -->
-            <div class="col d-sm-none d-md-block"></div>
-
+        <main class="row justify-content-center">
             <!-- ========== LEFT COLUMN ========== -->
             <div id="side_left" class="col-4 zone_green">
                 <h1 class="">Jean-Marc Garcia</h1>
                 <p class="zone_white text-center">👨‍💻 <br />Développeur Web Full Stack Junior</p>
                 <div class="zone_white d-flex justify-content-center align-items-center">
-                    <div><img id="jam_id" src="img/jam_id.jpg" alt="Photo d'identité de Jean-Marc Garcia" class="me-3" /></div>
+                    <div><img src="img/jam_id.jpg" alt="Photo d'identité de Jean-Marc Garcia" id="jam_id" class="m-3 shadow-lg" /></div>
                     <div>
                         <ul id="perso_info">
                             <li>39 ans</li>
@@ -83,20 +80,20 @@
                         <a href="https://github.com/3615Jam/" target="_blank"><img src="img/qrcode_logo_github.png" alt="QR code avec logo GitHub" class="icon" /></a>
                     </div>
                 </div>
-                <div class="zone_white col d-flex justify-content-around">
+                <div class="zone_white mb-0 col d-flex justify-content-around">
                     <img src="img/pdf.png" id="cv_pdf" alt="logo document pdf" class="icon" />
                     <div class="d-flex flex-column justify-content-evenly">
-                        <a href="doc/cv_garcia_jeanmarc.pdf" class="btn btn-outline-dark btn-sm">Afficher</a>
-                        <a href="doc/cv_garcia_jeanmarc.pdf" class="btn btn-outline-dark btn-sm" download>Télécharger</a>
+                        <a href="doc/cv_garcia_jeanmarc.pdf" class="btn btn-outline-dark">Afficher</a>
+                        <a href="doc/cv_garcia_jeanmarc.pdf" class="btn btn-outline-dark" download>Télécharger</a>
                     </div>
                 </div>
             </div>
 
             <!-- ========== RIGHT COLUMN ========== -->
-            <div id="side_right" class="col-4 my-3 zone_green">
-                <div id="present" class="mb-3">
-                    <h1 class="m-3">Aujourd'hui</h1>
-                    <div class="zone_white">
+            <div id="side_right" class="col-4 zone_green">
+                <div id="present" class="">
+                    <h1 class="">Aujourd'hui</h1>
+                    <div class="zone_white mb-0">
                         <h2>Titre Professionnel : Développeur Web et Web Mobile</h2>
                         <p>Le Titre Professionnel : Développeur Web et Web Mobile est un diplôme RNCP de niveau 5 ( Bac + 2 ). Le détail du programme officiel est <a href="https://www.francecompetences.fr/recherche/rncp/31114/" target="_blank">consultable ici</a>. La formation est full-stack, elle couvre front-end, back-end, bases de données et CMS.</p>
                         <div>
@@ -127,13 +124,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="">
-                    <div class="brico_top">top</div>
-                    <div class="brico_middle">mid</div>
-                    <div class="brico_bottom">bottom</div>
+                <div id="fake_separator">
+                    <div id="fake_separator_top"></div>
+                    <div id="fake_separator_bottom"></div>
                 </div>
-                <div id="past" class="my-3">
-                    <h1 class="m-3">Hier</h1>
+                <div id="past" class="">
+                    <h1 class="">Hier</h1>
                     <ul class="zone_white">
                         <li>2003 : Technicien Piscine</li>
                         <li>2004 : Technicien Machines à sous</li>
@@ -143,9 +139,6 @@
                     </ul>
                 </div>
             </div>
-
-            <!-- ========== RIGHT MARGIN ========== -->
-            <div class="col d-sm-none d-md-block"></div>
         </main>
 
         <footer class="text-center">

@@ -1,6 +1,14 @@
 * {
+    border: 1px solid red;
+}
+
+#jam_id {
     /* border: 1px solid red; */
-    /* font-size: small; */
+}
+
+.zone_white:hover {
+    transform: translateY(-3px) translateZ(10px);
+    box-shadow: 0 24px 36px rgba(0, 0, 0, 0.5);
 }
 
 .icon {
@@ -9,8 +17,12 @@
     /* max-width: 250px; */
 }
 
+#side_right {
+    min-width: 440px;
+}
+
 .zone_green {
-    min-width: 400px;
+    min-width: 440px;
     color: #fff;
     background-color: rgb(0, 158, 147);
     border-radius: 15px;
@@ -27,22 +39,13 @@
     padding: 1rem !important;
 }
 
-h1,
+h1 {
+    text-align: center;
+    margin-top: 1rem !important;
+}
+
 h2 {
     text-align: center;
-}
-
-.brico_top {
-    background-color: rgb(0, 158, 147);
-}
-
-.brico_middle {
-    background-color: #fff;
-    color: black;
-}
-
-.brico_bottom {
-    background-color: rgb(0, 158, 147);
 }
 
 ul {
@@ -58,3 +61,36 @@ li {
 li:last-of-type {
     margin-bottom: 0px;
 }
+
+/* ==================================== */
+/* - - - - - "fake_separator" - - - - - */
+/* ==================================== */
+/* 
+"fake_separator" est une div qui simule une séparation entre les éléments "Hier" et "Aujourd'hui" dans la colonne de droite. 
+
+Je voulais vraiment que les 2 colonnes (gauche et droite) soient de la même taille, j'ai donc choisi ce subterfuge : mettre "hier" et "aujourd'hui" dans la même colonne et simuler une séparation entre les 2. 
+
+Il est très probable qu'il existe une solution plus appropriée, mais ce subterfuge suffira pour le moment. 
+*/
+/* ------------------------------------ */
+#fake_separator {
+    background-color: #fff;
+    width: 440px;
+    position: relative;
+    left: -1rem;
+}
+
+#fake_separator > * {
+    background-color: rgb(0, 158, 147);
+    height: 1rem;
+}
+
+#fake_separator_top {
+    border-radius: 0px 0px 15px 15px;
+    margin-bottom: 2rem;
+}
+
+#fake_separator_bottom {
+    border-radius: 15px 15px 0px 0px;
+}
+/* ==================================== */
