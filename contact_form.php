@@ -1,11 +1,5 @@
 <?php
 // ==========================================
-// test pour s'assurer du fonctionnement : 
-echo "Email : " . htmlspecialchars($_POST['input_email']);
-echo "<br>";
-echo "Message : " . htmlspecialchars($_POST['input_message']);
-
-// ==========================================
 // envoi d'un mail avec les infos du formulaire : 
 
 // L'expéditeur :
@@ -22,9 +16,3 @@ $subject = 'From ' . $sender . ' via 3615jam contact form';
 
 // Envoi du mail : 
 mail('garciajeanmarc@gmail.com', $subject, $message);
-
-mail('garciajeanmarc@gmail.com', 'test_php_mail', 'blah blah blah\r\n');
-
-echo $message;
-echo $sender;
-echo $subject;
