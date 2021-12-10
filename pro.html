@@ -35,17 +35,17 @@
                         </div>
                     </div>
                     <div class="row mx-0">
-                        <ul id="soft_skills" class="zone_white my-0 me-3 col">
-                            <li class="text-center m-2">💪</li>
+                        <ul id="soft_skills" class="zone_white my-0 me-3 col text-center">
+                            <li class="m-2">💪</li>
                             <li>Rigoureux</li>
                             <li>Pondéré</li>
                             <li>Adaptabilité</li>
                             <li>Esprit d'équipe</li>
                             <li>Esprit de synthèse</li>
                         </ul>
-                        <ul id="hard_skills" class="zone_white my-0 col">
-                            <li class="text-center m-2">💻</li>
-                            <li>Mac | Win | Linux</li>
+                        <ul id="hard_skills" class="zone_white my-0 col text-center">
+                            <li class="m-2">💻</li>
+                            <li>Mac - Win - Linux</li>
                             <li>HTML | CSS</li>
                             <li>JavaScript | PHP</li>
                             <li>SGBDR | MySQL</li>
@@ -91,6 +91,7 @@
                     </div>
                 </div>
             </div>
+
             <!-- ========== RIGHT COLUMN ========== -->
             <div id="side_right" class="side col-4 p-0 d-flex flex-column justify-content-between">
                 <div id="present" class="zone_green mb-3">
@@ -100,25 +101,105 @@
                             Titre Professionnel :<br />
                             Développeur Web et Web Mobile
                         </h2>
-                        <p>Le Titre Professionnel : Développeur Web et Web Mobile est un diplôme RNCP de niveau 5 ( Bac + 2 ). Le détail du programme officiel est <a href="https://www.francecompetences.fr/recherche/rncp/31114/" target="_blank">consultable ici</a>. La formation est full-stack, elle couvre front-end, back-end, bases de données et CMS.</p>
-                        <div class="">
-                            <h2>Front-end</h2>
-                            <ul id="ccp1">
-                                <li>Design - UX / UI</li>
-                                <li>Web statique et adaptable</li>
-                                <li>Web dynamique</li>
-                                <li>CMS ( 1/2 ) : généralités</li>
-                            </ul>
+                        <p>Le TP : DWWM (<a href="https://www.francecompetences.fr/recherche/rncp/31114/" target="_blank">programme officiel détaillé</a>) est un diplôme RNCP de niveau 5 (Bac+2). La formation est séparée en 2 parties, Front-end et Back-end, chacune divisée en 4 sous-parties :</p>
+                        <!-- ========== ACCORDION FRONT ========== -->
+                        <h2>Front-end</h2>
+                        <div class="accordion-flush" id="accordion_front">
+                            <!-- ========== ACCORDION FRONT #1 - FIGMA ========== -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading1">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">Design - UX/UI</button>
+                                </h2>
+                                <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#accordion_front">
+                                    <div class="accordion-body text-center">
+                                        <p>Sensibilisation aux notions de design et d'UX/UI appliquées au web et aux apps mobiles.</p>
+                                        <p><span class="badge rounded-pill bg-secondary mx-3">Photoshop</span> | <span class="badge rounded-pill bg-secondary mx-3">Figma</span></p>
+                                        <a href="#" class="btn btn-outline-dark">Projets</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ========== ACCORDION FRONT #2 - HTML ========== -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading2">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">Web statique et adaptable</button>
+                                </h2>
+                                <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordion_front">
+                                    <div class="accordion-body text-center">
+                                        <p>Elaboration d'un site web statique et découverte du concept de "<em>responsive web design</em>". Sensibitlisation au référencement (<em>SEO</em>)</p>
+                                        <p><span class="badge rounded-pill bg-secondary mx-3">HTML</span> | <span class="badge rounded-pill bg-secondary mx-3">CSS</span> | <span class="badge rounded-pill bg-secondary mx-3">Bootstrap</span></p>
+                                        <a href="#" class="btn btn-outline-dark">Projets</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ========== ACCORDION FRONT #3 - JS ========== -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading3">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">Web dynamique</button>
+                                </h2>
+                                <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordion_front">
+                                    <div class="accordion-body text-center">
+                                        <p>Découverte de JavaScript (vanilla) et des intéractions avec le DOM.</p>
+                                        <p><span class="badge rounded-pill bg-secondary mx-3">JavaScript</span></p>
+                                        <a href="#" class="btn btn-outline-dark">Projets</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ========== ACCORDION FRONT #4 - CMS 1/2 ========== -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading4">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">CMS (1/2) : généralités</button>
+                                </h2>
+                                <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordion_front">
+                                    <div class="accordion-body text-center">
+                                        <p>Découverte du concept de "<em>Content Management System</em>".</p>
+                                        <p><span class="badge rounded-pill bg-secondary mx-3">WordPress</span></p>
+                                        <a href="#" class="btn btn-outline-dark">Projets</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <h2>Back-end</h2>
-                            <ul id="ccp2">
-                                <li>Création de bases de données</li>
-                                <li>Composants d'accès aux bases de données</li>
-                                <li>Back-end d'un web app</li>
-                                <li>CMS ( 2/2 ) : modules</li>
-                            </ul>
+
+                        <!-- ========== ACCORDION BACK ========== -->
+                        <h2>Back-end</h2>
+                        <div class="accordion-flush" id="accordion_back">
+                            <!-- ========== ACCORDION BACK #1 - BDD ========== -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading5">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="true" aria-controls="collapse5">Création de bases de données</button>
+                                </h2>
+                                <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#accordion_back">
+                                    <div class="accordion-body"></div>
+                                </div>
+                            </div>
+                            <!-- ========== ACCORDION BACK #2 - BDD/PHP ========== -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading6">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">Composants d'accès aux bases de données</button>
+                                </h2>
+                                <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6" data-bs-parent="#accordion_back">
+                                    <div class="accordion-body">xxxxxxxxxxxxxxx</div>
+                                </div>
+                            </div>
+                            <!-- ========== ACCORDION BACK #3 - PHP ========== -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading7">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">Back-end d'une web app</button>
+                                </h2>
+                                <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7" data-bs-parent="#accordion_back">
+                                    <div class="accordion-body">xxxxxxxxxxxxxxx</div>
+                                </div>
+                            </div>
+                            <!-- ========== ACCORDION BACK #4 - CMS 2/2 ========== -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading8">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">CMS (2/2) : modules</button>
+                                </h2>
+                                <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8" data-bs-parent="#accordion_back">
+                                    <div class="accordion-body">xxxxxxxxxxxxxxx</div>
+                                </div>
+                            </div>
                         </div>
+
                         <div>
                             <h2>Stage professionnel</h2>
                             <p>7 Lieues</p>
@@ -144,6 +225,7 @@
         <footer class="text-center">
             <p><small>© 2021 3615jam.fr</small></p>
         </footer>
+
         <!-- ========== MODAL - contact form ========== -->
         <div class="modal fade" id="contact_form_modal" tabindex="-1" aria-labelledby="contact_form_modal" aria-hidden="true">
             <div class="modal-dialog">
@@ -176,10 +258,39 @@
                 </div>
             </div>
         </div>
-        <!-- ========== END / MODAL - contact form ========== -->
-        <!-- ========== ALERT - contact form ========== -->
-        <!-- <div class="alert alert-success" role="alert">√ C'est envoyé ! Merci ;)</div> -->
-        <!-- <div class="alert alert-warning" role="alert">Oups ! Quelque chose n'a pas fonctionné correctement... Veuillez recommencer svp</div> -->
-        <!-- ========== END / ALERT - contact form ========== -->
+
+        <!-- ========== MODAL - contact form SUCCESS ========== -->
+        <div class="modal fade" id="contact_form_modal_success" tabindex="-1" aria-labelledby="contact_form_modal_success" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title"><span>👌</span>C'est envoyé !</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <fieldset class="form-group zone_green mt-3">
+                            <p class="zone_white d-block text-center">Merci ! Je reviens vers vous au plus vite !</p>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== MODAL - contact form FAIL ========== -->
+        <div class="modal fade" id="contact_form_modal_fail" tabindex="-1" aria-labelledby="contact_form_modal_fail" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title"><span>🤔</span>Oups !</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <fieldset class="form-group zone_green mt-3">
+                            <p class="zone_white d-block text-center">Quelque chose ne s'est pas passé correctement, veuillez recommencer svp</p>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
