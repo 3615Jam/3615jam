@@ -3,35 +3,38 @@
 }
 
 body {
-    background-color: #37474f !important;
+    /* ===== background sombre ===== */
+    /* background-color: #37474f !important; */
+    /* ===== background clair ===== */
+    background-color: #eee !important;
 }
 
 /* ========== LINKS ========== */
 a:link {
+    transition: 0.2s;
     text-decoration: none;
-    color: rgb(0, 158, 147);
+    color: #000;
 }
 
 a:visited {
     text-decoration: none;
-    color: rgb(0, 158, 147);
+    color: #000;
 }
 
 a:focus {
     text-decoration: none;
-    color: black;
+    color: #000;
 }
 
 a:hover {
     text-decoration: none;
-    color: white !important;
-    background-color: rgb(0, 158, 147);
+    /* color: #000 !important; */
     transition: 0.2s;
 }
 
 a:active {
     text-decoration: none;
-    color: black;
+    color: #000;
 }
 /* ========== END / LINKS ========== */
 
@@ -69,10 +72,10 @@ span {
 }
 
 .zone_white:hover {
-    /* ===== V1 ===== */
+    /* ========== V1 - SMALL SHADOW ========== */
     /* transform: translateY(-3px) translateZ(0); */
     /* box-shadow: 0 24px 36px rgba(0, 0, 0, 0.5); */
-    /* ===== V2 ===== */
+    /* ========== V2 - BIG SHADOW ========== */
     transform: translateX(5px) translateY(-5px) translateZ(0);
     box-shadow: -10px 10px rgb(0, 0, 0);
     transition: 0.2s;
@@ -102,4 +105,46 @@ li {
 
 li:last-of-type {
     margin-bottom: 0px;
+}
+
+/* ========== ACCORDION ========== */
+.accordion-button {
+    transition: 0.2s;
+}
+
+.accordion-button:hover {
+    background-color: #ddd;
+    transition: 0.2s;
+}
+
+.accordion-body {
+    background-color: #ddd;
+}
+
+/* ========== PHONE BUTTON ========== */
+#phone_button {
+    color: #000;
+}
+
+#phone_button:hover {
+    color: #000 !important;
+    background-color: #fff;
+}
+
+/* ========== BUTTON CLICK EFFECT ========== */
+.zone_click:active {
+    transform: translateX(-2.5px) translateY(2.5px) translateZ(0);
+    box-shadow: 0 0 rgb(0, 0, 0);
+    transition: 0.2s;
+}
+
+/* ========== LINK HIGHLIGHT EFFECT ========== */
+.link_effect {
+    color: rgb(0, 158, 147) !important;
+    transition: all 0.2s ease-in-out;
+}
+
+.link_effect:hover {
+    color: #fff !important;
+    background-color: rgb(0, 158, 147);
 }

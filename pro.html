@@ -9,10 +9,14 @@
         <link rel="icon" type="ico" href="img/3615jam-320-bigborder.png" />
         <!-- ========== 3615jam - CSS ========== -->
         <link rel="stylesheet" type="text/css" href="style_pro.css" />
-        <!-- ========== Bootstrap - CSS ========== -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
-        <!-- ========== Bootstrap - JS ========== -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <!-- ========== Bootstrap - CSS (LOCAL) ========== -->
+        <link rel="stylesheet" type="text/css" href="bootstrap-5.1.3-dist/css/bootstrap.min.css" />
+        <!-- ========== Bootstrap - JS (LOCAL) ========== -->
+        <script src="bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
+        <!-- ========== Bootstrap - CSS (CDN) ========== -->
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" /> -->
+        <!-- ========== Bootstrap - JS (CDN) ========== -->
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
         <!-- ========== 3615jam - JS ========== -->
         <script src="script.js" defer></script>
     </head>
@@ -22,7 +26,7 @@
             <!-- ========== LEFT COLUMN ========== -->
             <div id="side_left" class="side col-4 p-0">
                 <div class="zone_green">
-                    <h1 class="">Jean-Marc Garcia</h1>
+                    <h1>Jean-Marc Garcia</h1>
                     <p class="zone_white text-center">👨‍💻 <br />Développeur Web Full Stack Junior</p>
                     <div class="zone_white d-flex justify-content-center align-items-center p-0">
                         <div><img src="img/jam_id.jpg" alt="Photo d'identité de Jean-Marc Garcia" id="jam_id" class="m-3 shadow" /></div>
@@ -45,7 +49,7 @@
                         </ul>
                         <ul id="hard_skills" class="zone_white my-0 col text-center">
                             <li class="m-2">💻</li>
-                            <li>Mac - Win - Linux</li>
+                            <li>Mac | Windows | Linux</li>
                             <li>HTML | CSS</li>
                             <li>JavaScript | PHP</li>
                             <li>SGBDR | MySQL</li>
@@ -75,12 +79,8 @@
                         </ul>
                     </div>
                     <div id="links" class="row mx-0">
-                        <div class="zone_white my-0 me-3 col d-flex justify-content-center">
-                            <a href="https://www.linkedin.com/in/jean-marc-garcia-211bbb186/" target="_blank"><img src="img/qrcode_logo_linkedin.png" alt="QR code avec logo LinkedIn" class="icon" /></a>
-                        </div>
-                        <div class="zone_white my-0 col d-flex justify-content-center">
-                            <a href="https://github.com/3615Jam/" target="_blank"><img src="img/qrcode_logo_github.png" alt="QR code avec logo GitHub" class="icon" /></a>
-                        </div>
+                        <a class="zone_white zone_click my-0 me-3 col d-flex justify-content-center" href="https://www.linkedin.com/in/jean-marc-garcia-211bbb186/" target="_blank"><img src="img/qrcode_logo_linkedin.png" alt="QR code avec logo LinkedIn" class="icon" /></a>
+                        <a class="zone_white zone_click my-0 col d-flex justify-content-center" href="https://github.com/3615Jam/" target="_blank"><img src="img/qrcode_logo_github.png" alt="QR code avec logo GitHub" class="icon" /></a>
                     </div>
                     <div class="zone_white mb-0 col d-flex justify-content-around">
                         <img src="img/pdf.png" id="cv_pdf" alt="logo document pdf" class="icon" />
@@ -95,130 +95,259 @@
             <!-- ========== RIGHT COLUMN ========== -->
             <div id="side_right" class="side col-4 p-0 d-flex flex-column justify-content-between">
                 <div id="present" class="zone_green mb-3">
-                    <h1 class="">Aujourd'hui</h1>
+                    <h1>Aujourd'hui</h1>
                     <div class="zone_white mb-0">
                         <h2>
                             Titre Professionnel :<br />
                             Développeur Web et Web Mobile
                         </h2>
-                        <p>Le TP : DWWM (<a href="https://www.francecompetences.fr/recherche/rncp/31114/" target="_blank">programme officiel détaillé</a>) est un diplôme RNCP de niveau 5 (Bac+2). La formation est séparée en 2 parties, Front-end et Back-end, chacune divisée en 4 sous-parties :</p>
-                        <!-- ========== ACCORDION FRONT ========== -->
-                        <h2>Front-end</h2>
-                        <div class="accordion-flush" id="accordion_front">
+                        <!-- ========== ACCORDION PRESENT ========== -->
+                        <div class="accordion-flush" id="accordion_present">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="heading0">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse0" aria-expanded="true" aria-controls="collapse0">Description</button>
+                                </h3>
+                                <div id="collapse0" class="accordion-collapse collapse" aria-labelledby="heading0" data-bs-parent="#accordion_present">
+                                    <div class="accordion-body text-center">
+                                        <p>Le <strong>TP : DWWM</strong> (<a class="link_effect" href="https://www.francecompetences.fr/recherche/rncp/31114/" target="_blank">programme officiel détaillé</a>) est un diplôme RNCP de niveau 5 (Bac+2).</p>
+                                        <p>
+                                            La formation est composée de 2 parties : <br />
+                                            <strong>Front-end</strong> et <strong>Back-end</strong>.<br />
+                                            Chacune est divisée en <strong>4</strong> sous-parties.
+                                        </p>
+                                        <p>Elle est complétée par un <strong>stage</strong> en milieu professionnel de 10 semaines ainsi qu'un <strong>projet professionnel</strong>.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- </div> -->
+                            <h2>Front-end</h2>
+                            <!-- ========== ACCORDION FRONT ========== -->
+                            <!-- <div class="accordion-flush" id="accordion_front"> -->
                             <!-- ========== ACCORDION FRONT #1 - FIGMA ========== -->
                             <div class="accordion-item">
-                                <h2 class="accordion-header" id="heading1">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">Design - UX/UI</button>
-                                </h2>
-                                <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#accordion_front">
+                                <h3 class="accordion-header" id="heading1">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">Maquettage - UX/UI</button>
+                                </h3>
+                                <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#accordion_present">
                                     <div class="accordion-body text-center">
                                         <p>Sensibilisation aux notions de design et d'UX/UI appliquées au web et aux apps mobiles.</p>
-                                        <p><span class="badge rounded-pill bg-secondary mx-3">Photoshop</span> | <span class="badge rounded-pill bg-secondary mx-3">Figma</span></p>
+                                        <p><span class="badge rounded-pill bg-dark mx-3">Photoshop</span> | <span class="badge rounded-pill bg-dark mx-3">Figma</span></p>
                                         <a href="#" class="btn btn-outline-dark">Projets</a>
                                     </div>
                                 </div>
                             </div>
                             <!-- ========== ACCORDION FRONT #2 - HTML ========== -->
                             <div class="accordion-item">
-                                <h2 class="accordion-header" id="heading2">
+                                <h3 class="accordion-header" id="heading2">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">Web statique et adaptable</button>
-                                </h2>
-                                <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordion_front">
+                                </h3>
+                                <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordion_present">
                                     <div class="accordion-body text-center">
-                                        <p>Elaboration d'un site web statique et découverte du concept de "<em>responsive web design</em>". Sensibitlisation au référencement (<em>SEO</em>)</p>
-                                        <p><span class="badge rounded-pill bg-secondary mx-3">HTML</span> | <span class="badge rounded-pill bg-secondary mx-3">CSS</span> | <span class="badge rounded-pill bg-secondary mx-3">Bootstrap</span></p>
+                                        <p>Elaboration d'un site web statique et découverte du concept de <em>responsive web design</em>. Sensibitlisation au référencement (<em>SEO</em>)</p>
+                                        <p><span class="badge rounded-pill bg-dark mx-3">HTML</span> | <span class="badge rounded-pill bg-dark mx-3">CSS</span> | <span class="badge rounded-pill bg-dark mx-3">Bootstrap</span></p>
                                         <a href="#" class="btn btn-outline-dark">Projets</a>
                                     </div>
                                 </div>
                             </div>
                             <!-- ========== ACCORDION FRONT #3 - JS ========== -->
                             <div class="accordion-item">
-                                <h2 class="accordion-header" id="heading3">
+                                <h3 class="accordion-header" id="heading3">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">Web dynamique</button>
-                                </h2>
-                                <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordion_front">
+                                </h3>
+                                <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordion_present">
                                     <div class="accordion-body text-center">
                                         <p>Découverte de JavaScript (vanilla) et des intéractions avec le DOM.</p>
-                                        <p><span class="badge rounded-pill bg-secondary mx-3">JavaScript</span></p>
+                                        <p><span class="badge rounded-pill bg-dark mx-3">JavaScript</span></p>
                                         <a href="#" class="btn btn-outline-dark">Projets</a>
                                     </div>
                                 </div>
                             </div>
                             <!-- ========== ACCORDION FRONT #4 - CMS 1/2 ========== -->
                             <div class="accordion-item">
-                                <h2 class="accordion-header" id="heading4">
+                                <h3 class="accordion-header" id="heading4">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">CMS (1/2) : généralités</button>
-                                </h2>
-                                <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordion_front">
+                                </h3>
+                                <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordion_present">
                                     <div class="accordion-body text-center">
-                                        <p>Découverte du concept de "<em>Content Management System</em>".</p>
-                                        <p><span class="badge rounded-pill bg-secondary mx-3">WordPress</span></p>
+                                        <p>Découverte du concept de <em>Content Management System</em>.</p>
+                                        <p><span class="badge rounded-pill bg-dark mx-3">WordPress</span></p>
                                         <a href="#" class="btn btn-outline-dark">Projets</a>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                            <!-- </div> -->
 
-                        <!-- ========== ACCORDION BACK ========== -->
-                        <h2>Back-end</h2>
-                        <div class="accordion-flush" id="accordion_back">
+                            <h2>Back-end</h2>
+                            <!-- ========== ACCORDION BACK ========== -->
+                            <!-- <div class="accordion-flush" id="accordion_back"> -->
                             <!-- ========== ACCORDION BACK #1 - BDD ========== -->
                             <div class="accordion-item">
-                                <h2 class="accordion-header" id="heading5">
+                                <h3 class="accordion-header" id="heading5">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="true" aria-controls="collapse5">Création de bases de données</button>
-                                </h2>
-                                <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#accordion_back">
-                                    <div class="accordion-body"></div>
+                                </h3>
+                                <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#accordion_present">
+                                    <div class="accordion-body text-center">
+                                        <p>Conception et mise en place de bases de données relationnelle selon la <em>méthode Merise</em>.</p>
+                                        <p><span class="badge rounded-pill bg-dark mx-3">MySQL</span></p>
+                                        <a href="#" class="btn btn-outline-dark">Projets</a>
+                                    </div>
                                 </div>
                             </div>
                             <!-- ========== ACCORDION BACK #2 - BDD/PHP ========== -->
                             <div class="accordion-item">
-                                <h2 class="accordion-header" id="heading6">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">Composants d'accès aux bases de données</button>
-                                </h2>
-                                <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6" data-bs-parent="#accordion_back">
-                                    <div class="accordion-body">xxxxxxxxxxxxxxx</div>
+                                <h3 class="accordion-header" id="heading6">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">Composants d'accès BDD</button>
+                                </h3>
+                                <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6" data-bs-parent="#accordion_present">
+                                    <div class="accordion-body text-center">
+                                        <p>Interactions avec une base de données et son contenu : connexion, création, consultation, mise à jour, suppression.</p>
+                                        <p><span class="badge rounded-pill bg-dark mx-3">PHP</span> | <span class="badge rounded-pill bg-dark mx-3">MySQL</span></p>
+                                        <a href="#" class="btn btn-outline-dark">Projets</a>
+                                    </div>
                                 </div>
                             </div>
                             <!-- ========== ACCORDION BACK #3 - PHP ========== -->
                             <div class="accordion-item">
-                                <h2 class="accordion-header" id="heading7">
+                                <h3 class="accordion-header" id="heading7">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">Back-end d'une web app</button>
-                                </h2>
-                                <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7" data-bs-parent="#accordion_back">
-                                    <div class="accordion-body">xxxxxxxxxxxxxxx</div>
+                                </h3>
+                                <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7" data-bs-parent="#accordion_present">
+                                    <div class="accordion-body text-center">
+                                        <p>Développement de la partie back-end d'une interface utilisateur web.</p>
+                                        <p><span class="badge rounded-pill bg-dark mx-3">PHP</span></p>
+                                        <a href="#" class="btn btn-outline-dark">Projets</a>
+                                    </div>
                                 </div>
                             </div>
                             <!-- ========== ACCORDION BACK #4 - CMS 2/2 ========== -->
                             <div class="accordion-item">
-                                <h2 class="accordion-header" id="heading8">
+                                <h3 class="accordion-header" id="heading8">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">CMS (2/2) : modules</button>
-                                </h2>
-                                <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8" data-bs-parent="#accordion_back">
-                                    <div class="accordion-body">xxxxxxxxxxxxxxx</div>
+                                </h3>
+                                <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8" data-bs-parent="#accordion_present">
+                                    <div class="accordion-body text-center">
+                                        <p>Mise en place et gestion de modules de CMS (paiement, livraison...).</p>
+                                        <p><span class="badge rounded-pill bg-dark mx-3">WordPress</span></p>
+                                        <a href="#" class="btn btn-outline-dark">Projets</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- </div> -->
+
+                            <h2>Stage professionnel</h2>
+                            <!-- ========== ACCORDION STAGE 7 LIEUES ========== -->
+                            <!-- <div class="accordion-flush"> -->
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="heading9">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="true" aria-controls="collapse9">7 Lieues Technology</button>
+                                </h3>
+                                <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="heading9" data-bs-parent="#accordion_present">
+                                    <div class="accordion-body text-center">
+                                        <p><a class="link_effect" href="https://7lieues.io/">7 Lieues Technology</a> est une startup spécialisée dans l'analyse intelligente de données.</p>
+                                        <p>Elaboration de conversations via tchatbot RASA (Python) et intégration avec le moteur de gestion de process métiers (BPM) Camunda (JAVA).</p>
+                                        <p><span class="badge rounded-pill bg-dark mx-3">JAVA</span> | <span class="badge rounded-pill bg-dark mx-3">Python</span></p>
+                                        <a href="#" class="btn btn-outline-dark">Projets</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- </div> -->
+
+                            <!-- ========== ACCORDION PROJET PRO ========== -->
+                            <h2>Projet professionnel</h2>
+                            <!-- <div class="accordion-flush" id="accordion_proj"> -->
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="heading10">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10" aria-expanded="true" aria-controls="collapse10">Jam Project</button>
+                                </h3>
+                                <div id="collapse10" class="accordion-collapse collapse" aria-labelledby="heading10" data-bs-parent="#accordion_present">
+                                    <div class="accordion-body text-center">
+                                        <p>Soutenance finale pour l'obtention du titre : 1h30 devant un jury composé de 2 professionnels.</p>
+                                        <p><em>Jam Project</em> est une plateforme d'activités ludiques à destination de parents de jeunes enfants.</p>
+                                        <p><span class="badge rounded-pill bg-dark mx-3">HTML</span> | <span class="badge rounded-pill bg-dark mx-3">CSS</span> | <span class="badge rounded-pill bg-dark mx-3">JavaScript</span></p>
+                                        <p><span class="badge rounded-pill bg-dark mx-3">PHP</span> | <span class="badge rounded-pill bg-dark mx-3">MySQL</span></p>
+                                        <a href="#" class="btn btn-outline-dark">Jam Project</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
-                        <div>
-                            <h2>Stage professionnel</h2>
-                            <p>7 Lieues</p>
-                        </div>
-                        <div>
-                            <h2>Projet professionnel</h2>
-                            <p>Projet à présenter lors d'une soutenance de 1h30 devant un jury</p>
-                        </div>
                     </div>
                 </div>
+
                 <div id="past" class="zone_green mt-3">
-                    <h1 class="">Hier</h1>
-                    <ul class="zone_white mb-0">
+                    <h1>Hier</h1>
+                    <!-- ========== ORIGINAL VERSION ========== -->
+                    <!-- <ul class="zone_white mb-0">
                         <li>2003 : Technicien Piscine</li>
                         <li>2004 : Technicien Machines à sous</li>
                         <li>2008 : Australie - Working Holiday Visa</li>
                         <li>2009 : Technicien RATP</li>
                         <li>2010 : Apple</li>
-                    </ul>
+                    </ul> -->
+                    <div class="zone_white mb-0">
+                        <!-- ========== ACCORDION PAST ========== -->
+                        <div class="accordion-flush" id="accordion_past">
+                            <!-- ========== ACCORDION PAST - APPLE ========== -->
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="heading11">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse11" aria-expanded="true" aria-controls="collapse11">2010 : Apple</button>
+                                </h3>
+                                <div id="collapse11" class="accordion-collapse collapse" aria-labelledby="heading11" data-bs-parent="#accordion_past">
+                                    <div class="accordion-body text-center">
+                                        <ul>
+                                            <li><strong>BOH Specialist</strong> <br /><em>Gestion des stocks | 1 an</em></li>
+                                            <li><strong>Genius Admin</strong><br /><em>Gestion dossiers réparation | 1 an</em></li>
+                                            <li><strong>Family Room Specialist</strong><br /><em>Service technique iPhone | 2 ans</em></li>
+                                            <li><strong>Genius</strong><br /><em>Service technique Mac | 5 ans</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ========== ACCORDION PAST - RATP ========== -->
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="heading12">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse12" aria-expanded="true" aria-controls="collapse12">2009 : Technicien RATP</button>
+                                </h3>
+                                <div id="collapse12" class="accordion-collapse collapse" aria-labelledby="heading12" data-bs-parent="#accordion_past">
+                                    <div class="accordion-body text-center">
+                                        <p>Technicien itinérant pour la société <strong>Parkeon</strong> (aujourd'hui <a class="link_effect" href="https://www.flowbird.group/">Flowbird</a>), sous-traitant de la RATP pour le renouvellement du parc de machines de distribution de titres de transport.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ========== ACCORDION PAST - OZ ========== -->
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="heading13">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse13" aria-expanded="true" aria-controls="collapse13">2008 : Australie (Working Holiday Visa)</button>
+                                </h3>
+                                <div id="collapse13" class="accordion-collapse collapse" aria-labelledby="heading13" data-bs-parent="#accordion_past">
+                                    <div class="accordion-body text-center">
+                                        <p>Voyage (côte est) et travail (agriculture, restauration) en Australie.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ========== ACCORDION PAST - PARTOUCHE ========== -->
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="heading14">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse14" aria-expanded="true" aria-controls="collapse14">2004 : Technicien machines à sous</button>
+                                </h3>
+                                <div id="collapse14" class="accordion-collapse collapse" aria-labelledby="heading14" data-bs-parent="#accordion_past">
+                                    <div class="accordion-body text-center">
+                                        <p>Technicien machines à sous au casino <a class="link_effect" href="https://casino-bandol.partouche.com" target="_blank">Partouche de Bandol</a> (Var). Maintenance du parc de 130 machines et assistance clientèle.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ========== ACCORDION PAST - PISCINE ========== -->
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="heading15">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse15" aria-expanded="true" aria-controls="collapse15">2003 : Technicien piscine</button>
+                                </h3>
+                                <div id="collapse15" class="accordion-collapse collapse" aria-labelledby="heading15" data-bs-parent="#accordion_past">
+                                    <div class="accordion-body text-center">
+                                        <p>Technicien piscine pour la société Elyo Méditerrannée (groupe <a class="link_effect" href="https://engie.com" target="_blank">Engie</a>). Maintenance chaufferie et entretien des bassins (2 bassins intérieurs, 1 bassin olympique extérieur, 1 fosse à plongeon) pour le centre aquatique de la ville de Hyères (Var).</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>
@@ -247,12 +376,12 @@
                                     <label for="input_message" class="form-label">Dites-moi tout : </label>
                                     <textarea class="form-control" id="input_message" name="input_message" rows="3" required></textarea>
                                 </div>
-                                <input type="submit" class="btn btn-dark float-end" value="Envoyer le formulaire" />
+                                <input type="submit" class="btn btn-dark float-end" value="Envoyer" />
                             </form>
                         </fieldset>
-                        <fieldset class="form-group zone_green mt-3">
+                        <fieldset class="form-group zone_green mt-5">
                             <legend>☎️</legend>
-                            <a href="tel:+33695060605" class="zone_white d-block text-center">06 95 06 06 05</a>
+                            <a href="tel:+33695060605" id="phone_button" class="zone_white zone_click d-block text-center"><strong>06 95 06 06 05</strong></a>
                         </fieldset>
                     </div>
                 </div>
