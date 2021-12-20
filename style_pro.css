@@ -48,12 +48,12 @@ span {
 }
 
 .side {
-    min-width: 440px;
+    /* min-width: 440px; */
     margin: 1rem !important;
 }
 
 .zone_green {
-    min-width: 440px;
+    /* min-width: 440px; */
     color: #fff;
     background-color: rgb(0, 158, 147);
     border-radius: 15px;
@@ -147,4 +147,23 @@ li:last-of-type {
 .link_effect:hover {
     color: #fff !important;
     background-color: rgb(0, 158, 147);
+}
+
+/* ========== TESTS SMALL SCREENS ========== */
+@media (max-width: 480px) {
+    * {
+        font-size: 3.4vw;
+    }
+    .side {
+        width: 90% !important;
+    }
+    .icon {
+        width: 20vw;
+    }
+}
+
+@media (min-width: 481px) {
+    .side {
+        min-width: 440px;
+    }
 }
