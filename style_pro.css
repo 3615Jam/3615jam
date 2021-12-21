@@ -109,6 +109,14 @@ li:last-of-type {
     margin-bottom: 0px;
 }
 
+.project_btn {
+    background-color: #fff !important;
+}
+.project_btn:hover {
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
 /* ========== ACCORDION ========== */
 .accordion-button {
     transition: 0.2s;
