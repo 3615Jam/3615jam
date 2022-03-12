@@ -48,3 +48,24 @@ function fetchpost() {
     // (C) PREVENT HTML FORM SUBMIT
     return false;
 }
+
+/**
+ * ==========================================
+ * Modifier image de fond minitel au survol des boutons "dev" et "apple"
+ * ==========================================
+ */
+
+let image = document.getElementById("main_pix");
+let start = image.src;
+document.getElementById("dev").onmousemove = function () {
+    image.src = "img/dev_logo_pixel.png";
+};
+document.getElementById("dev").onmouseout = function () {
+    image.src = start;
+};
+document.getElementById("apple").onmousemove = function () {
+    image.src = "img/apple_logo_pixel.png";
+};
+document.getElementById("apple").onmouseout = function () {
+    image.src = start;
+};
