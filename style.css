@@ -8,6 +8,13 @@
     font-family: "minitel";
 }
 
+.super_centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
 #minitel {
     display: grid;
     place-items: center;
@@ -51,6 +58,7 @@
     height: 320px;
     background-color: white;
     border-radius: 10%;
+    text-align: center;
     display: grid;
     place-items: center;
 }
@@ -60,7 +68,7 @@
 }
 
 #x404 {
-    font-size: 4em;
+    font-size: 3em;
 }
 
 #keyboard {
@@ -120,4 +128,17 @@
     font-size: 0.7rem;
     display: grid;
     place-items: center;
+}
+
+.nocode_js {
+    display: grid;
+    place-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
 }
