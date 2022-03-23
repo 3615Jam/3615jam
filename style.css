@@ -130,7 +130,7 @@
     place-items: center;
 }
 
-.nocode_js {
+.no_js {
     display: grid;
     place-items: center;
     position: fixed;
