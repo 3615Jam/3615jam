@@ -1,0 +1,144 @@
+@font-face {
+    font-family: "minitel";
+    src: url("font/minitel.ttf") format("truetype");
+}
+
+* {
+    /* border: 1px solid red; */
+    font-family: "minitel";
+}
+
+.super_centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#minitel {
+    display: grid;
+    place-items: center;
+}
+
+#top {
+    width: 400px;
+    height: 40px;
+    /* background-color: rgb(44, 44, 44); */
+    background-color: rgb(245, 225, 195);
+    clip-path: polygon(50px 0px, 350px 0px, 100% 100%, 0% 100%);
+}
+
+#display {
+    width: 400px;
+    height: 400px;
+    /* background-color: silver; */
+    /* background-color: rgb(100, 90, 75); */
+    /* background-color: rgb(75, 60, 55); */
+    background-color: rgb(70, 60, 50);
+    display: grid;
+    place-items: center;
+}
+
+#screen {
+    width: 320px;
+    height: 320px;
+    background-color: black;
+    border-radius: 10%;
+    display: grid;
+    place-items: center;
+}
+
+#screen p {
+    color: white;
+    text-align: center;
+}
+
+#screen_white {
+    width: 320px;
+    height: 320px;
+    background-color: white;
+    border-radius: 10%;
+    text-align: center;
+    display: grid;
+    place-items: center;
+}
+
+#screen_white p {
+    text-align: center;
+}
+
+#x404 {
+    font-size: 3em;
+}
+
+#keyboard {
+    width: 600px;
+    height: 100px;
+    clip-path: polygon(100px 0px, 500px 0px, 100% 100%, 0% 100%);
+    /* background-color: grey; */
+    /* background-color: rgb(70, 55, 55); */
+    background-color: rgb(100, 90, 80);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.wrap {
+    width: 150px;
+    height: 60px;
+    display: grid;
+    place-items: center;
+}
+
+.button {
+    background-color: silver;
+    width: 120px;
+    height: 50px;
+    border: 5px solid #000;
+
+    border-width: 0 5px 5px 0;
+    border-radius: 5px;
+    border-color: transparent #ddd #999 transparent;
+    background-clip: padding-box;
+
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.button:hover {
+    color: white;
+}
+
+.button:active {
+    border-width: 0 3px 3px 0;
+    position: relative;
+    left: 1px;
+    top: 1px;
+}
+
+#bottom {
+    width: 600px;
+    height: 50px;
+    /* background-color: rgb(44, 44, 44); */
+    background-color: rgb(70, 60, 50);
+    color: silver;
+    font-size: 0.7rem;
+    display: grid;
+    place-items: center;
+}
+
+.no_js {
+    display: grid;
+    place-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
