@@ -42,8 +42,8 @@
 
 /* ----------[ minitel design ]---------- */
 #minitel {
-    width: 50vw;
-    height: 50vw;
+    width: 75vw;
+    height: 75vw;
     max-width: 500px;
     max-height: 500px;
     display: flex;
