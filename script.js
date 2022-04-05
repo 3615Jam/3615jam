@@ -69,3 +69,38 @@ document.getElementById("apple").onmousemove = function () {
 document.getElementById("apple").onmouseout = function () {
     image.src = start;
 };
+
+/**
+ * ==========================================
+ * UNDERCONSTRUCTION :
+ *
+ * Pendant la maintenance, empêche de cliquer sur les boutons (liens)
+ * et affiche l'image de sablier
+ * ==========================================
+ */
+
+// const minitelKeyboard = document.getElementById("keyboard");
+// const minitelScreen = document.getElementById("screen");
+// const minitelImage = document.getElementById("main_pix");
+// let originalImage = minitelImage.src;
+// let allLinks = document.getElementsByTagName("a");
+
+// Array.from(allLinks).forEach((element) => {
+//     element.addEventListener(
+//         "click",
+//         function (event) {
+//             event.preventDefault();
+//             alert("En cours de construction, de retour très vite ;)");
+//         },
+//         false
+//     );
+// });
+
+// keyboard.onmousemove = function () {
+//     minitelScreen.setAttribute("class", "screen_white");
+//     minitelImage.src = "img/sablier.gif";
+// };
+// keyboard.onmouseout = function () {
+//     minitelScreen.setAttribute("class", "screen_black");
+//     minitelImage.src = originalImage;
+// };
