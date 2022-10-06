@@ -16,7 +16,12 @@
     /* border: 1px solid red; */
 }
 
+html {
+    /* height: -webkit-fill-available; */
+}
+
 body {
+    /* height: -webkit-fill-available; */
     /* background: no-repeat center url("v2-img/3615jam-v2_2-bg_black_white-672.png"); */
     background-image: -webkit-linear-gradient(135deg, #000 50%, #fff 50%);
     image-rendering: pixelated;
