@@ -1,0 +1,232 @@
+/* ----------[ imports ]---------- */
+@font-face {
+    font-family: "minitel";
+    src: url("font/minitel.ttf") format("truetype");
+}
+
+/* ----------[ general ]---------- */
+* {
+    font-family: "minitel";
+}
+
+/* ----------[ root var ]---------- */
+:root {
+    --txt-color: black;
+    --bg-color: white;
+    --shadow: 0px 10px 10px grey;
+}
+
+/* ----------[ dark_theme var ]---------- */
+/* '.dark_theme' turns the design to dark when OS preferences are set to light */
+.dark_theme {
+    --txt-color: white;
+    --bg-color: black;
+    --shadow: none;
+}
+
+/* '.light_theme' overrides OS preferences when set to dark */
+.light_theme {
+    --txt-color: black;
+    --bg-color: white;
+    --shadow: 0px 10px 10px grey;
+}
+
+/* ----------[ center everything ]---------- */
+.super_centered {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ----------[ minitel global design ]---------- */
+#minitel {
+    width: 75vw;
+    height: 75vw;
+    max-width: 500px;
+    max-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#top {
+    width: 60%;
+    height: 10%;
+    background-color: rgb(245, 225, 195);
+    clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+}
+
+#display {
+    width: 60%;
+    height: 60%;
+    background-color: rgb(70, 60, 50);
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+#red_light {
+    width: 0.4rem;
+    height: 0.4rem;
+    background-color: red;
+    border-radius: 100%;
+    position: absolute;
+    top: 93%;
+    left: 93%;
+}
+
+/* ----------[ minitel - black screen ]---------- */
+.screen_black {
+    width: 80%;
+    height: 80%;
+    background-color: black;
+    border-radius: 10%;
+    display: grid;
+    place-items: center;
+}
+
+.screen_black p {
+    color: white;
+    text-align: center;
+}
+
+.screen_black img {
+    width: 80%;
+}
+
+/* ----------[ minitel - white screen ]---------- */
+.screen_white {
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    border-radius: 10%;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.screen_white p {
+    font-size: min(2vw, 1.2em);
+    /* text-align: center; */
+}
+
+.screen_white img {
+    width: 55%;
+}
+
+/* ----------[ minitel - 404 error ]---------- */
+#x404 {
+    font-size: 3em;
+}
+
+#keyboard {
+    width: 100%;
+    height: 23%;
+    background-color: rgb(100, 90, 80);
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    width: 25%;
+    height: 50%;
+    min-width: none;
+    min-height: 20px;
+    background-color: silver;
+    margin: 3%;
+    border: 5px solid #000;
+    border-width: 0 5px 5px 0;
+    border-radius: 5px;
+    border-color: transparent #ddd #999 transparent;
+    background-clip: padding-box;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: min(2vw, 1.2em);
+}
+
+.button:hover {
+    color: white;
+}
+
+.button:active {
+    border-width: 0 3px 3px 0;
+    position: relative;
+    left: 1px;
+    top: 1px;
+}
+
+#bottom {
+    width: 100%;
+    height: 7%;
+    background-color: rgb(70, 60, 50);
+    color: silver;
+    font-size: min(1vw, 0.7em);
+    display: grid;
+    place-items: center;
+}
+
+#bottom p {
+    margin: 0;
+}
+
+/* ----------[ deactivated JS ]---------- */
+#no_js {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(0.1rem);
+    -webkit-backdrop-filter: blur(0.1rem);
+    text-align: center;
+}
+
+#no_js h1 {
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+#no_js h1:first-child {
+    font-size: 4rem;
+}
+
+/* ----------[ dark mode ]---------- */
+@media (prefers-color-scheme: dark) {
+    body {
+        --bg-color: black;
+    }
+
+    #bottom {
+        --shadow: none;
+    }
+
+    #bottom.light_theme {
+        --shadow: 0px 10px 10px grey;
+    }
+
+    #no_js {
+        color: white;
+        background-color: rgba(2, 2, 2, 0.8);
+    }
+}
+
+body {
+    background: var(--bg-color);
+}
+
+#bottom {
+    box-shadow: var(--shadow);
+}
