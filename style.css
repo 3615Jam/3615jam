@@ -11,6 +11,7 @@
 
 /* ----------[ general ]---------- */
 body {
+    font-family: "minitel";
     /* background: no-repeat center url("v2-img/3615jam-v2_2-bg_black_white-672.png"); */
     background-image: -webkit-linear-gradient(135deg, #000 50%, #fff 50%);
     image-rendering: pixelated;
@@ -20,7 +21,6 @@ h2 {
     font-size: clamp(0.8rem, 2vw, 2rem);
 }
 
-/* ----------[ center everything ]---------- */
 .super_centered {
     min-height: 100vh;
     display: flex;
@@ -35,8 +35,36 @@ h2 {
     height: auto;
 }
 
+#return_button_zone {
+    text-align: center;
+}
+
+.button {
+    background-color: #c7b382;
+    padding: 10px;
+    border-bottom: 10px solid #f6eedb;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.button:hover {
+    color: white;
+    /* transform: translateY(5px); */
+    transition: 0.2s;
+}
+
+.button:active {
+    /* border-width: 0 0 2px 0; */
+    /* position: relative; */
+    /* top: 4px; */
+    /* transform: translateY(6px); */
+    border-bottom: 2px solid #f6eedb;
+    /* transition: 0.2s; */
+}
+
 #soon {
-    font-family: "minitel";
     text-align: center;
     /* font-weight: bold; */
 }
