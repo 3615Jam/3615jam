@@ -9,11 +9,19 @@
     src: url("font/PressStart2P.ttf") format("truetype");
 }
 
-/* ----------[ general ]---------- */
-/* * {
-    border: 1px solid red;
-} */
+/* ----------[ temporary tests only ]---------- */
+* {
+    /* border: 1px solid red; */
+    transition: 0.2s;
+}
 
+/* ----------[ common variables ]---------- */
+:root {
+    --primary-color: #000;
+    --secondary-color: #fff;
+}
+
+/* ----------[ main elements ]---------- */
 html,
 body {
     width: 100%;
@@ -30,51 +38,74 @@ body {
     /* image de fond alternative sans fichier image */
     /* background-image: -webkit-linear-gradient(135deg, #000 50%, #fff 50%); */
     image-rendering: pixelated;
-    transition: 0.2s;
+    /* transition: 0.2s; */
+    text-align: center;
+    /* ----- flex ----- */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    position: sticky;
+    top: 0;
 }
 
 main {
     width: 100%;
+    height: 80%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    /* justify-content: space-between; */
+    justify-content: center;
+}
+
+footer {
+    font-size: clamp(0.5rem, 2vw, 1rem);
+    position: sticky;
+    top: 100%;
+}
+
+footer span {
+    font-family: "PressStart2P";
 }
 
 a {
-    color: #000;
     text-decoration: none;
-}
-
-a:hover {
-    color: white;
-    transition: 0.2s;
 }
 
 h2 {
     font-size: clamp(0.8rem, 2vw, 2rem);
 }
 
-.super_centered {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+/* ----------[ zones ]---------- */
+.zone_white {
+    color: var(--primary-color);
 }
 
+.zone_white:hover h1 {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1rem;
+}
+
+.zone_black {
+    color: var(--secondary-color);
+}
+
+.zone_black:hover h1 {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 1rem;
+}
+
+/* ----------[ minitel ]---------- */
 #minitel {
     position: relative;
     max-width: 100%;
     height: auto;
-    transition: 0.2s;
-}
-
-/* ----------[ footer ]---------- */
-footer {
-    text-align: center;
-    font-family: "PressStart2P";
-    color: #fff;
-    font-size: clamp(0.5rem, 2vw, 1rem);
+    /* transition: 0.2s; */
 }
 
 /* ----------[ deactivated JS ]---------- */
@@ -89,10 +120,10 @@ footer {
     width: 100%;
     height: 100%;
     transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(0.1rem);
     -webkit-backdrop-filter: blur(0.1rem);
-    text-align: center;
+    /* text-align: center; */
 }
 
 #no_js h1 {
@@ -109,18 +140,14 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 25%;
+    width: 30%;
     height: 100%;
-    transition: 0.2s;
+    /* transition: 0.2s; */
 }
 
 .zone:hover {
     transform: scale(1.5);
-    transition: 0.2s;
-}
-
-#zone_apple {
-    color: #fff;
+    /* transition: 0.2s; */
 }
 
 /* ----------[ 404.html ]---------- */
@@ -128,8 +155,8 @@ footer {
     background-color: #c7b382;
     padding: 10px;
     border-bottom: 10px solid #f6eedb;
-    text-align: center;
-    transition: 0.2s;
+    /* text-align: center; */
+    /* transition: 0.2s; */
 }
 
 .button:active {
@@ -138,10 +165,8 @@ footer {
 }
 
 /* ----------[ soon.html ]---------- */
-#soon {
-    text-align: center;
-    /* font-weight: bold; */
-}
+/* #soon {
+} */
 
 /* ----------[ responsive for mobile devices ]---------- */
 @media screen and (max-width: 767px) {
