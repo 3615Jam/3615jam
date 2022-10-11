@@ -38,7 +38,6 @@ body {
     /* image de fond alternative sans fichier image */
     /* background-image: -webkit-linear-gradient(135deg, #000 50%, #fff 50%); */
     image-rendering: pixelated;
-    /* transition: 0.2s; */
     text-align: center;
     /* ----- flex ----- */
     display: flex;
@@ -57,7 +56,6 @@ main {
     height: 80%;
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
     justify-content: center;
 }
 
@@ -105,7 +103,6 @@ h2 {
     position: relative;
     max-width: 100%;
     height: auto;
-    /* transition: 0.2s; */
 }
 
 /* ----------[ deactivated JS ]---------- */
@@ -123,7 +120,6 @@ h2 {
     background-color: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(0.1rem);
     -webkit-backdrop-filter: blur(0.1rem);
-    /* text-align: center; */
 }
 
 #no_js h1 {
@@ -142,12 +138,10 @@ h2 {
     justify-content: center;
     width: 30%;
     height: 100%;
-    /* transition: 0.2s; */
 }
 
 .zone:hover {
-    transform: scale(1.5);
-    /* transition: 0.2s; */
+    /* transform: scale(1.5); */
 }
 
 /* ----------[ 404.html ]---------- */
