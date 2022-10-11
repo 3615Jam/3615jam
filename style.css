@@ -9,7 +9,7 @@
     src: url("font/PressStart2P.ttf") format("truetype");
 }
 
-/* ----------[ temporary tests only ]---------- */
+/* ----------[ applies to every elements ]---------- */
 * {
     /* border: 1px solid red; */
     transition: 0.2s;
@@ -155,13 +155,22 @@ h2 {
     background-color: #c7b382;
     padding: 10px;
     border-bottom: 10px solid #f6eedb;
-    /* text-align: center; */
-    /* transition: 0.2s; */
+    color: var(--primary-color);
+    width: 250px;
+}
+
+.button:hover {
+    color: var(--secondary-color);
 }
 
 .button:active {
     transform: translateY(2px);
     border-bottom: 2px solid #f6eedb;
+}
+
+#homepage_return {
+    display: flex;
+    justify-content: center;
 }
 
 /* ----------[ soon.html ]---------- */
