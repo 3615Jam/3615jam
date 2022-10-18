@@ -123,7 +123,7 @@ h1 {
 }
 
 h2 {
-    font-size: clamp(0.8rem, 2vw, 2rem);
+    font-size: var(--normal-responsive-font);
 }
 
 /* ----------[ zones ]---------- */
@@ -287,17 +287,18 @@ h2 {
     margin: 2rem;
     /* width: 80%; */
     /* height: 80%; */
-    background-color: lightgray;
-    border-color: var(--primary-color);
+    /* background-color: lightgray; */
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
     border-style: solid;
     border-width: 1rem;
-    /* box-shadow: 0px -1px 3px rgba(255, 255, 255, 0.5); */
-    box-shadow: 5px 5px #fff, -5px -5px #fff;
+    /* box-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5), 0px -3px 3px rgba(255, 255, 255, 0.5); */
+    /* box-shadow: -5px 5px #fff, 5px -5px #fff; */
 }
 
 #big_text {
     font-size: var(--normal-responsive-font);
-    display: none;
+    /* display: none; */
 }
 
 #small_text {
