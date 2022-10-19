@@ -283,8 +283,11 @@ h2 {
 }
 
 #main_content_template {
+    display: flex;
+
     /* overflow: scroll; */
     margin: 2rem;
+    padding: 1rem;
     /* width: 80%; */
     /* height: 80%; */
     /* background-color: lightgray; */
@@ -294,6 +297,10 @@ h2 {
     border-width: 1rem;
     /* box-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5), 0px -3px 3px rgba(255, 255, 255, 0.5); */
     /* box-shadow: -5px 5px #fff, 5px -5px #fff; */
+}
+
+#template_central_zone {
+    margin: 1rem;
 }
 
 #big_text {
