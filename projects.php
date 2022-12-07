@@ -20,7 +20,10 @@ $header_content = '';
  *      - la 1ère pour récupérer tous les projets 
  *      - la 2nde pour lister les technos utilisées dans chaque projet 
  */
-$main_content = '<div style="background-color: #FFF; text-align: left">';
+$main_content = '
+    <div style="background-color: #FFF; text-align: center">
+        <button><a href="project_manager/projects_manager.html">Gérer les projets</a></button>
+';
 foreach ($projects_list["projects"] as $project_key => $project_val) {
     $main_content .= '
         <ul>
@@ -28,11 +31,11 @@ foreach ($projects_list["projects"] as $project_key => $project_val) {
             <li>' . $project_val["summary"] . '</li>
                 <ul>';
     foreach ($projects_list["projects"][$project_key]["techno"] as $techno_key => $techno_val) {
-        $main_content .= '<li>' . $techno_key . '</li>';
+        $main_content .= '<li>' . $techno_val . '</li>';
     }
-    $main_content .= '</ul>';
-    $main_content .= '<li>' . $project_val["link"] . '</li>
-        </ul>';
+    $main_content .= '</ul></ul>';
+    // $main_content .= '<li>' . $project_val["link"] . '</li>
+    //     </ul>';
 }
 $main_content .= '</div>';
 

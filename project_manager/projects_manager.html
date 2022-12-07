@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+    </head>
+    <!-- ----------------------------------------- -->
+    <div style="background-color: #fff">
+        <form method="post" action="project_register.php">
+            <fieldset>
+                <p>
+                    <label for="project_title">Titre du projet :</label>
+                    <input type="text" id="project_title" name="project_title" size="60" required />
+                </p>
+                <p>
+                    <label for="project_summary">Résumé :</label>
+                    <textarea id="project_summary" name="project_summary" cols="60" rows="5" required></textarea>
+                </p>
+                <p>Techno(s) utilisée(s) :</p>
+
+                <div>
+                    <input type="checkbox" id="techno_html" name="techno_html" value="html" />
+                    <label for="techno_html">HTML</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="techno_css" name="techno_css" value="css" />
+                    <label for="techno_css">CSS</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="techno_js" name="techno_js" value="js" />
+                    <label for="techno_js">JavaScript</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="techno_php" name="techno_php" value="php" />
+                    <label for="techno_php">PHP</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="techno_sql" name="techno_sql" value="sql" />
+                    <label for="techno_sql">MySQL</label>
+                </div>
+                <p><input type="submit" value="Enregistrer" /></p>
+            </fieldset>
+        </form>
+    </div>
+</html>

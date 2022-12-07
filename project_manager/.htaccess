@@ -1,0 +1,4 @@
+AuthUserFile C:\Users\shinz\jam_dev\jam_conf/.htpasswd
+AuthName "Alors mon coquin, qui es-tu ??"
+AuthType Basic
+Require valid-user

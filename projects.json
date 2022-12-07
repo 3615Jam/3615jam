@@ -2,29 +2,21 @@
     "projects": [
         {
             "id": 0,
-            "title": "test #1",
-            "summary": "Ceci est un test, pour vérifier que tout fonctionne correctement. Nous allons ajouter beaucoup de texte ici pour être sûr que tout s'affiche correctement, même en cas de texte long. Merci de m'avoir lu jusqu'ici, pour l'anecdote, je suis en train de chanter, de manière extrêmement fausse, ce texte tout en le tapant sur mon clavier.",
-            "techno": {
-                "html": true,
-                "css": true,
-                "javascript": false,
-                "php": false,
-                "mysql": false
-            },
-            "link": "/test/index.html"
+            "title": "title #1",
+            "summary": "éééééé #1",
+            "techno": []
         },
         {
             "id": 1,
-            "title": "test #2",
-            "summary": "Test 2 - test 2 - test 2 -",
-            "techno": {
-                "html": true,
-                "css": true,
-                "javascript": false,
-                "php": false,
-                "mysql": false
-            },
-            "link": "/test2/index.html"
+            "title": "title #2",
+            "summary": "summary #2",
+            "techno": []
+        },
+        {
+            "id": 2,
+            "title": "proj 3",
+            "summary": "résumé 3",
+            "techno": ["html", "js"]
         }
     ]
 }
