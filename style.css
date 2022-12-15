@@ -1,4 +1,6 @@
-/* ----------[ imports ]---------- */
+/* ================================================================================ */
+/* [ IMPORTS ] */
+/* ================================================================================ */
 @font-face {
     font-family: "minitel";
     src: url("font/minitel.ttf") format("truetype");
@@ -9,24 +11,30 @@
     src: url("font/PressStart2P.ttf") format("truetype");
 }
 
-/* ----------[ applies to every elements ]---------- */
+/* ================================================================================ */
+/* [ COMMON VARIABLES ] */
+/* ================================================================================ */
+:root {
+    /* ----------[ color ]---------- */
+    --primary-color: #000;
+    --secondary-color: #fff;
+
+    /* ----------[ font size ]---------- */
+    --small-responsive-font: clamp(0.3rem, 2vw, 0.7rem);
+    --normal-responsive-font: clamp(0.8rem, 2vw, 1rem);
+    --large-responsive-font: clamp(1.2rem, 3vw, 2.5rem);
+}
+
+/* ================================================================================ */
+/* [ COMMON ELEMENTS (same on all pages) ] */
+/* ================================================================================ */
+
+/* ----------[ general ]---------- */
 * {
     /* border: 1px solid red; */
     transition: 0.2s;
 }
 
-/* ----------[ common variables ]---------- */
-:root {
-    /* ----- color ----- */
-    --primary-color: #000;
-    --secondary-color: #fff;
-    /* ----- font size ----- */
-    --small-responsive-font: clamp(0.5rem, 2vw, 0.8rem);
-    --normal-responsive-font: clamp(0.8rem, 2vw, 1rem);
-    --large-responsive-font: clamp(1.2rem, 3vw, 2.5rem);
-}
-
-/* ----------[ main elements ]---------- */
 html,
 body {
     width: 100%;
@@ -35,6 +43,7 @@ body {
     padding: 0;
 }
 
+/* ----------[ body ]---------- */
 body {
     font-family: "minitel";
 
@@ -57,6 +66,7 @@ body {
     justify-content: space-between;
 }
 
+/* ----------[ header ]---------- */
 header {
     position: sticky;
     top: 0;
@@ -70,10 +80,44 @@ header {
     justify-content: space-between;
 
     background-color: var(--secondary-color);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
     /* border-bottom: 3px solid var(--secondary-color); */
+    border-bottom: 3px solid var(--primary-color);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
+/* ----------[ header dropdown menu ]---------- */
+#minitel_small:hover {
+    transform: scale(1.2);
+    /* transform: translate(0, 10px); */
+    /* transform: scale(6) translate(20px, 25px); */
+    transform-origin: top;
+}
+
+#logo {
+    position: relative;
+    display: inline-block;
+    z-index: 2;
+}
+
+#logo:hover nav {
+    /* display: block; */
+    transform: translate(0, 100%);
+    /* top: 100%; */
+}
+
+nav {
+    transition: transform 1s;
+    width: 280px;
+    /* display: none; */
+    position: absolute;
+    bottom: 0;
+    border-bottom: 3px solid var(--primary-color);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    z-index: 1;
+}
+
+/* ----------[ main ]---------- */
 main {
     /* width: 100%; */
     /* height: 80%; */
@@ -92,6 +136,7 @@ main {
     border-width: 1rem; */
 }
 
+/* ----------[ footer ]---------- */
 footer {
     /* display: flex; */
     /* justify-content: center; */
@@ -104,18 +149,22 @@ footer {
     /* top: 100%; */
     /* bottom: 0; */
     color: var(--secondary-color);
-    background-color: var(--primary-color);
+    /* background-color: var(--primary-color); */
     /* border-top: 3px solid var(--secondary-color); */
+    /* border-top: 3px solid #333; */
+    /* box-shadow: 0px -1px 3px rgba(255, 255, 255, 0.5); */
     /* box-shadow: 0 -1px 3px var(--secondary-color); */
-    box-shadow: 0px -1px 3px rgba(255, 255, 255, 0.5);
 }
 
 footer span {
     font-family: "PressStart2P";
 }
 
-a {
+/* ----------[ links and titles ]---------- */
+a,
+a:visited {
     text-decoration: none;
+    color: inherit;
 }
 
 h1 {
@@ -126,22 +175,28 @@ h2 {
     font-size: var(--normal-responsive-font);
 }
 
-/* ----------[ zones ]---------- */
-.zone_white {
+/* ----------[ black and white zones ]---------- */
+.zone_white,
+.zone_white a,
+.zone_white a:visited {
+    background-color: var(--secondary-color);
     color: var(--primary-color);
 }
 
-.zone_white:hover h1 {
+.zone_white a:hover {
     background-color: var(--primary-color);
     color: var(--secondary-color);
     padding: 1rem;
 }
 
-.zone_black {
+.zone_black,
+.zone_black a,
+.zone_black a:visited {
+    background-color: var(--primary-color);
     color: var(--secondary-color);
 }
 
-.zone_black:hover h1 {
+.zone_black a:hover {
     background-color: var(--secondary-color);
     color: var(--primary-color);
     padding: 1rem;
@@ -150,13 +205,13 @@ h2 {
 /* ----------[ minitel ]---------- */
 #minitel {
     position: relative;
-    /* max-width: 100%; */
-    /* max-height: 100%; */
-    /* height: auto; */
-    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    /* object-fit: contain; */
 }
 
-/* ----------[ deactivated JS ]---------- */
+/* ----------[ no script ]---------- */
 #no_js {
     display: flex;
     flex-direction: column;
@@ -182,24 +237,28 @@ h2 {
     font-size: 4rem;
 }
 
+/* ================================================================================ */
+/* [ DIFFERENT ELEMENTS BY PAGE ] */
+/* ================================================================================ */
+
 /* ----------[ page - index ]---------- */
 #main_content_index {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
     align-items: center;
 }
 
-.zone {
+/* .zone {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 30%;
     height: 100%;
-}
+} */
 
-.zone:hover {
-    /* transform: scale(1.5); */
-}
+/* .zone:hover {
+    transform: scale(1.5);
+} */
 
 /* ----------[ page - 404 ]---------- */
 .button {
@@ -312,9 +371,12 @@ h2 {
     font-size: var(--small-responsive-font);
 }
 
-/* ----------[ responsive for mobile devices ]---------- */
-@media screen and (max-width: 767px) {
-    main {
+/* ================================================================================ */
+/* [ RESPONSIVE ] */
+/* ================================================================================ */
+@media screen and (max-width: 768px) {
+    main,
+    #main_content_index {
         flex-direction: column;
     }
     #breadcrumb {
