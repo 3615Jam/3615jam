@@ -16,8 +16,10 @@
 /* ================================================================================ */
 :root {
     /* ----------[ color ]---------- */
-    --primary-color: #000;
-    --secondary-color: #fff;
+    --light-mode-light: #fff;
+    --light-mode-dark: #000;
+    --dark-mode-light: #dbe8f4;
+    --dark-mode-dark: #181818;
 
     /* ----------[ font size ]---------- */
     --small-responsive-font: clamp(0.3rem, 2vw, 0.7rem);
@@ -46,20 +48,7 @@ body {
 /* ----------[ body ]---------- */
 body {
     font-family: "minitel";
-
-    background-image: url("img/3615jam-v2_2-website_bg-4k-black_white.png");
-    /* background-image: url("img/3615jam-v2_2-website_bg-2k-black_white.png"); */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: #000;
-    /* image de fond alternative sans fichier image */
-    /* background-image: -webkit-linear-gradient(135deg, #000 50%, #fff 50%); */
-
-    image-rendering: pixelated;
-
     text-align: center;
-
     display: flex;
     flex-direction: column;
     /* align-items: center; */
@@ -67,7 +56,7 @@ body {
 }
 
 /* ----------[ header ]---------- */
-header {
+.header_content {
     position: sticky;
     top: 0;
 
@@ -148,8 +137,8 @@ footer {
     /* position: sticky; */
     /* top: 100%; */
     /* bottom: 0; */
-    color: var(--secondary-color);
-    /* background-color: var(--primary-color); */
+    /* color: var(--secondary-color); */
+    /* background-color: #101010; */
     /* border-top: 3px solid var(--secondary-color); */
     /* border-top: 3px solid #333; */
     /* box-shadow: 0px -1px 3px rgba(255, 255, 255, 0.5); */
@@ -237,6 +226,32 @@ h2 {
     font-size: 4rem;
 }
 
+.flex_center {
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items: center; */
+}
+
+.text_left {
+    text-align: start;
+}
+
+/* ================================================================================ */
+/* [ PAGES WITH BLACK AND WHITE PIXEL BACKGROUND ] */
+/* ================================================================================ */
+
+.with_background {
+    /* background-image: url("img/3615jam-v2_2-website_bg-4k-black_white.png"); */
+    background-image: url("img/3615jam-v2_2-website_bg-2k-black_white.png");
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #000;
+    /* image de fond alternative sans fichier image */
+    /* background-image: -webkit-linear-gradient(135deg, #000 50%, #fff 50%); */
+    image-rendering: pixelated;
+}
+
 /* ================================================================================ */
 /* [ DIFFERENT ELEMENTS BY PAGE ] */
 /* ================================================================================ */
@@ -246,6 +261,10 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#main_content_index h1 {
+    margin: 0 3rem;
 }
 
 /* .zone {
@@ -289,7 +308,7 @@ h2 {
 
 /* ----------[ page - apple ]---------- */
 #page_apple {
-    /* background-image: none; */
+    background-image: none;
 }
 
 /* ----------[ page - template ]---------- */
@@ -371,10 +390,18 @@ h2 {
     font-size: var(--small-responsive-font);
 }
 
+#footer_test_1 {
+    color: var(--light-mode-dark);
+    background-color: var(--dark-mode-light);
+}
+
 /* ================================================================================ */
 /* [ RESPONSIVE ] */
 /* ================================================================================ */
 @media screen and (max-width: 768px) {
+    body {
+        background-size: cover;
+    }
     main,
     #main_content_index {
         flex-direction: column;
