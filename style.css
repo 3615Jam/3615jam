@@ -15,11 +15,12 @@
 /* [ COMMON VARIABLES ] */
 /* ================================================================================ */
 :root {
-    /* ----------[ color ]---------- */
-    --light-mode-light: #fff;
-    --light-mode-dark: #000;
-    --dark-mode-light: #dbe8f4;
-    --dark-mode-dark: #181818;
+    /* ----------[ colors ]---------- */
+    --color-light: #fff;
+    --color-light-medium: #bfbfbf;
+    --color-medium: #282828;
+    --color-dark-medium: #121212;
+    --color-dark: #000;
 
     /* ----------[ font size ]---------- */
     --small-responsive-font: clamp(0.3rem, 2vw, 0.7rem);
@@ -32,6 +33,32 @@
 /* ================================================================================ */
 
 /* ----------[ general ]---------- */
+.dark_mode {
+    background-color: var(--color-dark-medium);
+    color: var(--color-light-medium);
+}
+
+.flex_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex_evenly {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.flex_between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text_left {
+    text-align: start;
+}
+
+/* ----------[ applies to every element ]---------- */
 * {
     /* border: 1px solid red; */
     transition: 0.2s;
@@ -226,16 +253,6 @@ h2 {
     font-size: 4rem;
 }
 
-.flex_center {
-    display: flex;
-    justify-content: space-evenly;
-    /* align-items: center; */
-}
-
-.text_left {
-    text-align: start;
-}
-
 /* ================================================================================ */
 /* [ PAGES WITH BLACK AND WHITE PIXEL BACKGROUND ] */
 /* ================================================================================ */
@@ -393,6 +410,36 @@ h2 {
 #footer_test_1 {
     color: var(--light-mode-dark);
     background-color: var(--dark-mode-light);
+}
+
+/* ----------[ page - z_test_2 (light dark mode) ]---------- */
+#ligth_mode_test {
+    background-color: #fff;
+    color: #000;
+}
+
+#dark_mode_test {
+    background-color: #121212;
+    color: #bfbfbf;
+}
+
+#dark_mode_test h2 {
+    color: #fff;
+}
+
+.zones {
+    margin: 3rem;
+    padding: 2rem;
+    border: 3px dashed green;
+}
+
+.boxes {
+    width: 30%;
+    height: 10rem;
+    border-radius: 1rem;
+    background-color: #282828;
+    color: #fff;
+    /* box-shadow: 0px 3px 3px #000; */
 }
 
 /* ================================================================================ */
