@@ -38,6 +38,10 @@
     color: var(--color-light-medium);
 }
 
+.hidden {
+    display: none;
+}
+
 /* ----------[ flex ]---------- */
 .flex_center {
     display: flex;
@@ -189,7 +193,7 @@ body {
     z-index: 1;
 }
 
-#dark_mode_switch {
+.dark_mode_switch {
     /* width: 48px; */
     /* height: auto; */
     max-width: 30%;
@@ -239,6 +243,12 @@ footer span {
     font-family: "PressStart2P";
 }
 
+.transparent_footer {
+    /* color: var(--color-light); */
+    background-color: transparent;
+    box-shadow: none;
+}
+
 /* ----------[ links and titles ]---------- */
 a,
 a:visited {
@@ -286,6 +296,14 @@ h2 {
     height: auto;
     /* filter: drop-shadow(0px -1px 8px black); */
     /* object-fit: contain; */
+}
+
+#minitel_img {
+    position: absolute;
+}
+
+#minitel_animation {
+    position: relative;
 }
 
 /* ----------[ no script ]---------- */
@@ -434,8 +452,8 @@ h2 {
 }
 
 #footer_test_1 {
-    color: var(--light-mode-dark);
-    background-color: var(--dark-mode-light);
+    /* color: var(--light-mode-dark);
+    background-color: var(--dark-mode-light); */
 }
 
 /* ----------[ page - z_test_2 (light dark mode) ]---------- */

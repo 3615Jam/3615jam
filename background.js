@@ -17,7 +17,7 @@ function isTouchEnabled() {
 if (!isTouchEnabled()) {
     web.onmousemove = function () {
         body.style.backgroundPosition = "40%";
-        minitel.style.left = "10%";
+        minitel.style.left = "6%";
     };
     web.onmouseout = function () {
         body.style.backgroundPosition = "center";
@@ -26,7 +26,7 @@ if (!isTouchEnabled()) {
 
     apple.onmousemove = function () {
         body.style.backgroundPosition = "60%";
-        minitel.style.left = "-10%";
+        minitel.style.left = "-6%";
     };
     apple.onmouseout = function () {
         body.style.backgroundPosition = "center";

@@ -7,14 +7,44 @@
         <title>3615 JAM | TEST #1</title>
         <link rel="stylesheet" type="text/css" href="style.css" />
         <link rel="icon" type="image/png" href="img/3615jam-v2_2-logo-big-bg_black-txt_white-512.png" />
-        <!-- <script src="script.js" defer></script> -->
+        <script src="darkmode.js" defer></script>
     </head>
     <!-- ================================================================================ -->
     <!-- [ ⬆️ HEAD / BODY ⬇️ ] -->
     <!-- ================================================================================ -->
     <body>
         <!-- ====================[ HEADER ]==================== -->
-        <header></header>
+        <header>
+            <div class="header_content">
+                <div id="logo" class="square" onclick="showNavMenu()">
+                    <!-- <img id="minitel_small" src="img/3615jam-v2_2-minitel_animation-logo-96.gif" /> -->
+                    <img id="minitel_small" src="img/3615jam-v2_2-minitel_animation-logo-480.gif" />
+                </div>
+
+                <!-- <div class="flex_between"> -->
+                <div id="breadcrumb">
+                    <h1 id="header_title"><a href="index.html">3615 JAM</a></h1>
+                    <!-- <hr /> -->
+                    <nav>
+                        <ul id="header_nav" class="flex_evenly">
+                            <li class="nav_links"><a href="index.html">Accueil</a></li>
+                            <li class="nav_links"><a href="apple.html">Apple</a></li>
+                            <li class="nav_links this_page"><a href="web.html">Web</a></li>
+                            <li class="nav_links"><a href="contact.html">Contact</a></li>
+                            <li class="nav_links"><a href="who.html">Qui est Jam ?</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- </div> -->
+
+                <div class="square flex_center" onclick="switchMode()">
+                    <!-- switch light / dark mode -->
+                    <!--  DARK  -->
+                    <img id="dark_switch" class="dark_mode_switch" src="img/dark_mode-dark.png" />
+                    <img id="light_switch" class="dark_mode_switch hidden" src="img/light_mode-dark.png" />
+                </div>
+            </div>
+        </header>
         <!-- ====================[ MAIN ]==================== -->
         <main>
             <h1>TEST #1</h1>
@@ -24,17 +54,17 @@
                     <h3>html WITH bg</h3>
                     <ul>
                         <li>
-                            <button><a href="index.html">Index</a></button>
+                            <a href="index.html">Index</a>
                         </li>
 
                         <li>
-                            <button><a href="soon.html">Soon</a></button>
+                            <a href="soon.html">Soon</a>
                         </li>
                         <li>
-                            <button><a href="404.html">404</a></button>
+                            <a href="404.html">404</a>
                         </li>
                         <li>
-                            <button><a href="403.html">403</a></button>
+                            <a href="403.html">403</a>
                         </li>
                     </ul>
                 </div>
@@ -42,25 +72,25 @@
                     <h3>html WITHOUT bg</h3>
                     <ul>
                         <li>
-                            <button><a href="apple.html">Apple</a></button>
+                            <a href="apple.html">Apple</a>
                         </li>
                         <li>
-                            <button><a href="web.html">Web</a></button>
+                            <a href="web.html">Web</a>
                         </li>
                         <li>
-                            <button><a href="contact.html">Contact</a></button>
+                            <a href="contact.html">Contact</a>
                         </li>
                         <li>
-                            <button><a href="who.html">Qui est Jam ?</a></button>
+                            <a href="who.html">Qui est Jam ?</a>
                         </li>
                         <li>
-                            <button><a href="z_template.html">Template</a></button>
+                            <a href="z_template.html">Template</a>
                         </li>
                         <li>
-                            <button><a href="z_test_1.html">TEST #1 (cette page)</a></button>
+                            <a href="z_test_1.html">TEST #1 (cette page)</a>
                         </li>
                         <li>
-                            <button><a href="z_test_2.html">TEST #2 (light / dark mode)</a></button>
+                            <a href="z_test_2.html">TEST #2 (light / dark mode)</a>
                         </li>
                     </ul>
                 </div>
@@ -68,10 +98,10 @@
                     <h3>PHP</h3>
                     <ul>
                         <li>
-                            <button><a href="projects.php">Projets</a></button>
+                            <a href="projects.php">Projets</a>
                         </li>
                         <li>
-                            <button><a href="project_manager/test_access.html">Test d'accès</a></button>
+                            <a href="project_manager/test_access.html">Test d'accès</a>
                         </li>
                     </ul>
                 </div>
