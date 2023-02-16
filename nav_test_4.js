@@ -2,7 +2,7 @@ const nav = document.getElementById("navnav");
 const centralDisplay = document.getElementById("central_display");
 
 function toggleNavMenu() {
-    window.innerWidth < 1080 ? nav.classList.toggle("slide_up") : centralDisplay.classList.toggle("slide_right");
+    window.innerWidth < 1080 ? nav.classList.toggle("slide_down") : centralDisplay.classList.toggle("slide_right");
     console.log("##### toggleNavMenu OK #####");
 }
 
