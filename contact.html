@@ -6,21 +6,91 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>3615 JAM | Contact</title>
         <link rel="stylesheet" type="text/css" href="style.css" />
-        <link rel="icon" type="image/png" href="img/3615jam-v2_2-logo-big-bg_black-txt_white-512.png" />
-        <!-- <script src="script.js" defer></script> -->
+        <link rel="icon" type="image/png" href="img/3615jam-v2_2-logo-big-bg_black-txt_white-128.png" />
+        <!-- <script src="nav.js" defer></script> -->
+        <script src="darkmode.js" defer></script>
+        <script src="contact_form.js" defer></script>
     </head>
     <!-- ================================================================================ -->
     <!-- [ ⬆️ HEAD / BODY ⬇️ ] -->
     <!-- ================================================================================ -->
     <body>
         <!-- ====================[ HEADER ]==================== -->
-        <header></header>
+        <header>
+            <div class="header_content">
+                <div id="logo" class="square">
+                    <a href="index.html">
+                        <!-- <img id="minitel_small" src="img/3615jam-v2_2-minitel_animation-logo-96.gif" /> -->
+                        <!-- <img id="minitel_small" src="img/3615jam-v2_2-minitel_animation-logo-480.gif" -->
+                        <div id="minitel_small" class="transition">
+                            <!-- <img id="minitel" src="img/3615jam-v2_2-minitel_animation-logo-672.gif" /> -->
+                            <img id="minitel_img" src="img/3615jam-v2_2-minitel-no_logo-bg_transparent-shadow_white-672.png" alt="minitel only image" />
+                            <img id="minitel_animation" src="img/3615jam-v2_2-only-logo-672.gif" alt="3615 JAM animated logo" />
+                        </div>
+                    </a>
+                </div>
+
+                <!-- <div class="flex_between"> -->
+                <!-- <div id="breadcrumb"> -->
+                <!-- <h1 id="header_title"><a href="index.html">3615 JAM</a></h1> -->
+                <!-- <hr /> -->
+                <nav id="">
+                    <!-- le bouton suivant n'apparait que si le viewport et < 1080 px -->
+                    <!-- <button id="show_nav_menu" onclick="showNavMenu()">show nav</button> -->
+                    <ul id="header_nav" class="flex_center">
+                        <!-- <li class="nav_links"><a href="index.html">Accueil</a></li> -->
+                        <li class="nav_links"><a href="apple.html">Apple</a></li>
+                        <li class="nav_links"><a href="web.html">Web</a></li>
+                        <li class="nav_links"><a href="who.html">Qui est Jam ?</a></li>
+                        <li class="nav_links this_page"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <!-- </div> -->
+                <!-- </div> -->
+
+                <div class="square flex_center" onclick="switchMode()">
+                    <!-- switch light / dark mode -->
+                    <!-- <button>DARK</button> -->
+                    <img id="dark_switch" class="dark_mode_switch" src="img/ico-dark_mode-dark-512.png" />
+                    <img id="light_switch" class="dark_mode_switch hidden" src="img/ico-light_mode-dark-512.png" />
+                </div>
+            </div>
+        </header>
         <!-- ====================[ MAIN ]==================== -->
         <main>
-            <div>CONTACT PAGE</div>
+            <!-- <div>
+                <span>Coucou Contact</span>
+            </div> -->
+            <div id="main_content_contact" class="flex_center">
+                <form onsubmit="return fetchpost()">
+                    <fieldset class="">
+                        <legend><img src="img/ico-mail-dark-64.png" class="legend_logo" alt="pixel mail logo" /></legend>
+                        <!-- <form action="contact_form.php" method="post"> -->
+                        <div class="zone_form">
+                            <label for="input_email" class="">Votre email : </label><br />
+                            <input type="email" class="form_zone_text" id="input_email" name="input_email" required />
+                        </div>
+                        <div class="zone_form">
+                            <label for="input_message" class="">Comment puis-je vous aider ? </label><br />
+                            <textarea class="form_zone_text" id="input_message" name="input_message" rows="5" required></textarea>
+                        </div>
+                        <input type="submit" class="button_minitel button_green" value="Envoi" />
+                        <!-- <button class="flex_center"><h2 class="button_minitel">Test</h2></button> -->
+                    </fieldset>
+                    <fieldset class="flex_center">
+                        <legend><img src="img/ico-phone-dark-64.png" class="legend_logo" alt="pixel phone logo" /></legend>
+                        <!-- <div id="phone_button" class="minitel_button_container"> -->
+                        <!-- <a href="tel:+33756819500" class="button_minitel zone_form"><strong>07 56 81 95 00</strong></a> -->
+                        <a href="tel:+33756819500">
+                            <button type="button" class="button_minitel button_sand"><strong>07 56 81 95 00</strong></button>
+                        </a>
+                        <!-- </div> -->
+                    </fieldset>
+                </form>
+            </div>
         </main>
         <!-- ====================[ FOOTER ]==================== -->
-        <footer class="zone_black">
+        <footer>
             <p>
                 <small><span>©</span> 2022 - 3615 JAM</small>
             </p>

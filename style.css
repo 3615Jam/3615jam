@@ -42,6 +42,15 @@
     display: none;
 }
 
+.dark_mode_logo {
+    filter: invert();
+}
+
+.dark_mode_input {
+    background-color: var(--color-medium);
+    color: var(--color-light-medium);
+}
+
 /* ----------[ flex ]---------- */
 .flex_center {
     display: flex;
@@ -65,20 +74,35 @@
 
 /* ----------[ minitel style button ]---------- */
 .button_minitel {
-    background-color: #c7b382;
+    font-family: "minitel";
     padding: 10px;
-    border-bottom: 10px solid #f6eedb;
-    color: var(--primary-color);
     width: 250px;
+    border: none;
+    margin: 1rem 0;
 }
 
 .button_minitel:hover {
-    color: var(--secondary-color);
+    color: var(--color-light);
 }
 
-.button_minitel:active {
-    transform: translateY(2px);
-    border-bottom: 2px solid #f6eedb;
+.button_sand {
+    background-color: #bfa97a;
+    box-shadow: 0 10px darkgoldenrod;
+}
+
+.button_sand:active {
+    transform: translateY(6px);
+    box-shadow: 0 4px darkgoldenrod;
+}
+
+.button_green {
+    background-color: #63884b;
+    box-shadow: 0 10px darkgreen;
+}
+
+.button_green:active {
+    transform: translateY(6px);
+    box-shadow: 0 4px darkgreen;
 }
 
 /* ----------[ applies to every element ]---------- */
@@ -137,7 +161,7 @@ ul {
 
     display: flex;
     justify-content: space-between;
-    /* align-items: center; */
+    align-items: center;
 
     color: var(--color-light);
 
@@ -336,19 +360,23 @@ footer span {
 /* ----------[ minitel ]---------- */
 #minitel {
     position: relative;
-    max-width: 100%;
-    max-height: 100%;
-    height: auto;
-    /* filter: drop-shadow(0px -1px 8px black); */
-    /* object-fit: contain; */
+    /* max-width: 100%; */
+    /* max-height: 100%; */
+    /* height: auto; */
 }
 
 #minitel_img {
     position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
 }
 
 #minitel_animation {
     position: relative;
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
 }
 
 /* ----------[ no script ]---------- */
@@ -407,6 +435,11 @@ footer span {
 
 .zoom:hover {
     transform: scale(1.5);
+    /* transition: 200ms; */
+}
+
+.transition {
+    transition: 200ms;
 }
 
 /* ----------[ page - 403 ]---------- */
@@ -416,6 +449,46 @@ footer span {
 /* ----------[ page - soon ]---------- */
 
 /* ----------[ page - apple ]---------- */
+
+/* ----------[ page - contact ]---------- */
+#main_content_contact {
+    /* width: 90%; */
+}
+
+form {
+    width: 90%;
+    max-width: 1000px;
+}
+
+fieldset {
+    margin: 4rem 0;
+    /* padding: 2rem; */
+}
+
+.zone_form {
+    margin: 2rem 0;
+}
+
+.form_zone_text {
+    width: 90%;
+}
+
+legend > img {
+    width: 70%;
+    height: 70%;
+    /* max-width: 75%; */
+
+    /* position: relative; */
+    /* max-width: 75%; */
+    /* max-height: 75%; */
+    /* height: auto; */
+}
+
+/* input[type="email"],
+textarea {
+    background-color: var(--color-medium);
+    color: var(--color-light-medium);
+} */
 
 /* ----------[ page - template ]---------- */
 #header_content {
@@ -439,10 +512,12 @@ footer span {
     background-color: pink;
 }
 
-#minitel_small {
+#minitel_small > * {
     /* max-width: 20%; */
+    /* max-width: 96px; */
+    max-height: 100%;
     max-width: 100%;
-    /* max-height: 100%; */
+
     /* height: auto; */
     /* object-fit: contain; */
 }
@@ -534,23 +609,24 @@ footer span {
 /* ================================================================================ */
 /* [ RESPONSIVE ] */
 /* ================================================================================ */
+
 @media screen and (max-width: 1080px) {
     #header_nav {
-        /* display: none; */
-        background-color: var(--color-dark);
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-        border: 1px solid red;
+        display: none;
+        /* background-color: var(--color-dark); */
+        /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); */
+        /* border: 1px solid red; */
 
-        flex-direction: column;
-        position: absolute;
+        /* flex-direction: column; */
+        /* position: absolute; */
         /* position: relative; */
-        width: 100%;
+        /* width: 100%; */
         /* height: 100%; */
         /* top: 0; */
         /* left: 0; */
 
-        transform-origin: 0% 0%;
-        transform: translate(0, -100%);
+        /* transform-origin: 0% 0%; */
+        /* transform: translate(0, -100%); */
         /* transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1); */
 
         /* z-index: -1; */
@@ -559,16 +635,20 @@ footer span {
     }
 
     #show_nav_menu {
-        display: inherit;
+        /* display: inherit; */
     }
 }
 
 @media screen and (max-width: 768px) {
     body {
         background-size: cover;
+        font-size: var(--normal-responsive-font);
     }
     main,
     #main_content_index {
         flex-direction: column;
+    }
+
+    #main_content_index {
     }
 }

@@ -6,18 +6,60 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>3615 JAM | Qui est Jam ?</title>
         <link rel="stylesheet" type="text/css" href="style.css" />
-        <link rel="icon" type="image/png" href="img/3615jam-v2_2-logo-big-bg_black-txt_white-512.png" />
-        <!-- <script src="script.js" defer></script> -->
+        <link rel="icon" type="image/png" href="img/3615jam-v2_2-logo-big-bg_black-txt_white-128.png" />
+        <script src="nav.js" defer></script>
+        <script src="darkmode.js" defer></script>
     </head>
     <!-- ================================================================================ -->
     <!-- [ ⬆️ HEAD / BODY ⬇️ ] -->
     <!-- ================================================================================ -->
     <body>
         <!-- ====================[ HEADER ]==================== -->
-        <header></header>
+        <header>
+            <div class="header_content">
+                <div id="logo" class="square">
+                    <a href="index.html">
+                        <!-- <img id="minitel_small" src="img/3615jam-v2_2-minitel_animation-logo-96.gif" /> -->
+                        <!-- <img id="minitel_small" src="img/3615jam-v2_2-minitel_animation-logo-480.gif" -->
+                        <div id="minitel_small" class="transition">
+                            <!-- <img id="minitel" src="img/3615jam-v2_2-minitel_animation-logo-672.gif" /> -->
+                            <img id="minitel_img" src="img/3615jam-v2_2-minitel-no_logo-bg_transparent-shadow_white-672.png" alt="minitel only image" />
+                            <img id="minitel_animation" src="img/3615jam-v2_2-only-logo-672.gif" alt="3615 JAM animated logo" />
+                        </div>
+                    </a>
+                </div>
+
+                <!-- <div class="flex_between"> -->
+                <!-- <div id="breadcrumb"> -->
+                <!-- <h1 id="header_title"><a href="index.html">3615 JAM</a></h1> -->
+                <!-- <hr /> -->
+                <nav id="">
+                    <!-- le bouton suivant n'apparait que si le viewport et < 1080 px -->
+                    <!-- <button id="show_nav_menu" onclick="showNavMenu()">show nav</button> -->
+                    <ul id="header_nav" class="flex_center">
+                        <!-- <li class="nav_links"><a href="index.html">Accueil</a></li> -->
+                        <li class="nav_links"><a href="apple.html">Apple</a></li>
+                        <li class="nav_links"><a href="web.html">Web</a></li>
+                        <li class="nav_links this_page"><a href="who.html">Qui est Jam ?</a></li>
+                        <li class="nav_links"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <!-- </div> -->
+                <!-- </div> -->
+
+                <div class="square flex_center" onclick="switchMode()">
+                    <!-- switch light / dark mode -->
+                    <!-- <button>DARK</button> -->
+                    <img id="dark_switch" class="dark_mode_switch" src="img/dark_mode-dark.png" />
+                    <img id="light_switch" class="dark_mode_switch hidden" src="img/light_mode-dark.png" />
+                </div>
+            </div>
+        </header>
         <!-- ====================[ MAIN ]==================== -->
         <main>
-            <div>WHO IS JAM PAGE</div>
+            <div>
+                <span>Coucou Qui est Jam ?</span>
+            </div>
         </main>
         <!-- ====================[ FOOTER ]==================== -->
         <footer>
