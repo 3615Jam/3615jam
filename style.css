@@ -78,7 +78,7 @@
     padding: 10px;
     width: 250px;
     border: none;
-    margin: 1rem 0;
+    margin: 2rem 0;
 }
 
 .button_minitel:hover {
@@ -103,6 +103,12 @@
 .button_green:active {
     transform: translateY(6px);
     box-shadow: 0 4px darkgreen;
+}
+
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 /* ----------[ applies to every element ]---------- */
@@ -179,7 +185,7 @@ ul {
 
 /* ----------[ header dropdown menu ]---------- */
 #minitel_small:hover {
-    transform: scale(1.2);
+    /* transform: scale(1.2); */
     /* transform: translate(0, 10px); */
     /* transform: scale(6) translate(20px, 25px); */
     /* transform-origin: top; */
@@ -282,6 +288,7 @@ ul {
     /* height: auto; */
     max-width: 30%;
     filter: invert();
+    cursor: pointer;
 }
 
 /* ----------[ main ]---------- */
@@ -370,6 +377,13 @@ footer span {
     max-width: 100%;
     max-height: 100%;
     height: auto;
+}
+
+#minitel_img_small {
+    max-width: 100%;
+}
+#minitel_img_small:hover {
+    transform: scale(1.2);
 }
 
 #minitel_animation {
