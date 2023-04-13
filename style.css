@@ -627,7 +627,7 @@ textarea {
 /* [ RESPONSIVE ] */
 /* ================================================================================ */
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1079px) {
     #header_nav {
         display: none;
         /* background-color: var(--color-dark); */
