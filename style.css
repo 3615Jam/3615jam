@@ -75,10 +75,12 @@
 /* ----------[ minitel style button ]---------- */
 .button_minitel {
     font-family: "minitel";
-    padding: 10px;
     width: 250px;
-    border: none;
     margin: 2rem 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .button_minitel:hover {
