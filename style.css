@@ -105,11 +105,12 @@
     box-shadow: 0 4px darkgreen;
 }
 
-/* input {
+input,
+button {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-} */
+}
 
 /* ----------[ applies to every element ]---------- */
 * {
