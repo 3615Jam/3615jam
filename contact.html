@@ -7,7 +7,7 @@
         <title>3615 JAM | Contact</title>
         <link rel="stylesheet" type="text/css" href="style.css" />
         <link rel="icon" type="image/png" href="img/3615jam-v2_2-logo-big-bg_black-txt_white-128.png" />
-        <!-- <script src="nav.js" defer></script> -->
+        <script src="nav.js" defer></script>
         <script src="darkmode.js" defer></script>
         <script src="contact_form.js" defer></script>
     </head>
@@ -17,8 +17,8 @@
     <body>
         <!-- ====================[ HEADER ]==================== -->
         <header>
-            <div class="header_content">
-                <div id="logo" class="square">
+            <div class="header_content flex_center">
+                <div id="minitel_logo" class="square">
                     <a href="index.html">
                         <!-- <img id="minitel_small" src="img/3615jam-v2_2-minitel_animation-logo-96.gif" /> -->
                         <!-- <img id="minitel_small" src="img/3615jam-v2_2-minitel_animation-logo-480.gif" -->
@@ -34,9 +34,11 @@
                 <!-- <div id="breadcrumb"> -->
                 <!-- <h1 id="header_title"><a href="index.html">3615 JAM</a></h1> -->
                 <!-- <hr /> -->
-                <nav id="">
-                    <!-- le bouton suivant n'apparait que si le viewport et < 1080 px -->
-                    <!-- <button id="show_nav_menu" onclick="showNavMenu()">show nav</button> -->
+                <nav id="" class="">
+                    <div id="mask" class="flex_center">
+                        <!-- le bouton suivant n'apparait que si le viewport et < 1080 px -->
+                        <button id="show_nav_menu" class="button_minitel button_sand" onclick="toggleNavMenu()">Menu</button>
+                    </div>
                     <ul id="header_nav" class="flex_center">
                         <!-- <li class="nav_links"><a href="index.html">Accueil</a></li> -->
                         <li class="nav_links transition"><a href="apple.html">Apple</a></li>
@@ -48,7 +50,7 @@
                 <!-- </div> -->
                 <!-- </div> -->
 
-                <div class="square flex_center" onclick="switchMode()">
+                <div id="dark_mode_logo" class="square flex_center" onclick="switchMode()">
                     <!-- switch light / dark mode -->
                     <!-- <button>DARK</button> -->
                     <img id="dark_switch" class="dark_mode_switch" src="img/ico-dark_mode-dark-512.png" />

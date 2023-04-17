@@ -15,6 +15,6 @@ function switchMode() {
     });
     // switch les logos noir en blanc en mode dark
     Array.from(legendLogo).forEach((element) => {
-        element.classList.toggle("dark_mode_logo");
+        element.classList.toggle("dark_mode_img");
     });
 }
