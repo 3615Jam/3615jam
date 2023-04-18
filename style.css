@@ -43,7 +43,27 @@
 }
 
 .dark_mode_img {
-    filter: invert();
+    /* filter: invert(); */
+}
+
+.sun {
+    content: url("img/ico-sun-dark_mode.png");
+}
+
+.ico_mail_white {
+    content: url("img/ico-mail-dark_mode-64.png");
+}
+
+.ico_phone_white {
+    content: url("img/ico-phone-dark_mode-64.png");
+}
+
+#dark_mode_switch {
+    /* width: 48px; */
+    /* height: auto; */
+    max-width: 50%;
+    /* filter: invert(); */
+    cursor: pointer;
 }
 
 .dark_mode_input {
@@ -75,9 +95,10 @@
 /* ----------[ minitel style button ]---------- */
 .button_minitel {
     font-family: "minitel";
-    width: 250px;
+    /* width: 250px; */
     margin: 2rem 0;
-    padding: 10px;
+    /* padding: 10px; */
+    padding: 0.7rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -303,14 +324,6 @@ ul {
     /* z-index: 1; */
 }
 
-.dark_mode_switch {
-    /* width: 48px; */
-    /* height: auto; */
-    max-width: 30%;
-    filter: invert();
-    cursor: pointer;
-}
-
 /* ----------[ main ]---------- */
 main {
     /* width: 100%; */
@@ -508,8 +521,8 @@ fieldset {
 }
 
 legend > img {
-    width: 70%;
-    height: 70%;
+    width: 60%;
+    /* height: 70%; */
     /* max-width: 75%; */
 
     /* position: relative; */

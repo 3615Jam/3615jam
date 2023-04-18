@@ -33,9 +33,11 @@
                 <!-- <div id="breadcrumb"> -->
                 <!-- <h1 id="header_title"><a href="index.html">3615 JAM</a></h1> -->
                 <!-- <hr /> -->
-                <nav id="">
-                    <!-- le bouton suivant n'apparait que si le viewport et < 1080 px -->
-                    <!-- <button id="show_nav_menu" onclick="showNavMenu()">show nav</button> -->
+                <nav id="" class="">
+                    <div id="mask" class="flex_center">
+                        <!-- le bouton suivant n'apparait que si le viewport et < 1080 px -->
+                        <button id="show_nav_menu" class="button_minitel button_sand" onclick="toggleNavMenu()">Menu</button>
+                    </div>
                     <ul id="header_nav" class="flex_center">
                         <!-- <li class="nav_links"><a href="index.html">Accueil</a></li> -->
                         <li class="nav_links transition"><a href="apple.html">Apple</a></li>
@@ -47,11 +49,11 @@
                 <!-- </div> -->
                 <!-- </div> -->
 
-                <div class="square flex_center" onclick="switchMode()">
+                <div id="dark_mode_logo" class="square flex_center" onclick="switchMode()">
                     <!-- switch light / dark mode -->
                     <!-- <button>DARK</button> -->
-                    <img id="dark_switch" class="dark_mode_switch" src="img/ico-dark_mode-dark-512.png" />
-                    <img id="light_switch" class="dark_mode_switch hidden" src="img/ico-light_mode-dark-512.png" />
+                    <img id="dark_mode_switch" class="" src="img/ico-moon-dark_mode.png" alt="icon for dark or light mode" />
+                    <!-- <img id="light_switch" class="dark_mode_switch hidden" src="img/ico-light_mode-dark-512.png" /> -->
                 </div>
             </div>
         </header>
