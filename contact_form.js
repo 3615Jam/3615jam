@@ -22,27 +22,32 @@ function fetchpost() {
             return response.text();
         })
         .then(function (text) {
-            // console.log(text);
-            // alert("C'est bien envoyé ! Merci ;)");
+            console.log(text);
+            alert("C'est bien envoyé ! Merci ;)");
+
+            // ----------[ BOOTSTRAP ONLY ]----------
             // si tout se passe correctement, on cache la modal du formulaire ...
-            let modalForm = bootstrap.Modal.getInstance(document.getElementById("contact_form_modal"));
-            modalForm.hide();
+            // let modalForm = bootstrap.Modal.getInstance(document.getElementById("contact_form_modal"));
+            // modalForm.hide();
             // ... et on affiche la modal d'envoi avec succès pendant 3 secondes avant de la cacher
-            let modalSuccess = new bootstrap.Modal(document.getElementById("contact_form_modal_success"));
-            modalSuccess.show();
-            setTimeout(function () {
-                modalSuccess.hide();
-            }, 3000);
+            // let modalSuccess = new bootstrap.Modal(document.getElementById("contact_form_modal_success"));
+            // modalSuccess.show();
+            // setTimeout(function () {
+            // modalSuccess.hide();
+            // }, 3000);
+            // ----------[ BOOTSTRAP ONLY - END ]----------
         })
         .catch(function (error) {
             console.log(error);
-            // alert("Oups ! Il y a eu une erreur, veuillez recommencer svp...");
+            alert("Oups ! Il y a eu une erreur, veuillez recommencer svp...");
+            // ----------[ BOOTSTRAP ONLY ]----------
             // en cas d'erreur, on affiche une modal informative ("veuillez recommencer") pendant 3 secondes
-            let modalFail = new bootstrap.Modal(document.getElementById("contact_form_modal_fail"));
-            modalFail.show();
-            setTimeout(function () {
-                modalFail.hide();
-            }, 3000);
+            // let modalFail = new bootstrap.Modal(document.getElementById("contact_form_modal_fail"));
+            // modalFail.show();
+            // setTimeout(function () {
+            // modalFail.hide();
+            // }, 3000);
+            // ----------[ BOOTSTRAP ONLY - END ]----------
         });
 
     // (C) PREVENT HTML FORM SUBMIT

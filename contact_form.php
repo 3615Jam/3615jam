@@ -12,7 +12,7 @@ $message = htmlspecialchars($_POST['input_message']) . "\r\n";
 $message = wordwrap($message, 70, "\r\n");
 
 // Destinataire : 
-$to  = 'garciajeanmarc@gmail.com';
+$to  = 'contact@3615jam.fr';
 
 // Sujet : 
 $subject = '3615jam - Contact via formulaire : ' . $sender;
@@ -50,3 +50,7 @@ $headers[] = 'Content-type: text/html; charset=iso-8859-1';
 
 // Envoi
 mail($to, $subject, $message_body, implode("\r\n", $headers));
+
+// vérification  du message : 
+
+var_dump($message, $sender);
